@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-219 incidents included.
+223 incidents included.
 
 This repo is only for the educational purpose.
 
@@ -34,7 +34,13 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ## List of Past DeFi Incidents
 
-[20230602 NST SimpleSwap](#20230602--nst-simple-swap---unverified-contract-wrong-approval)
+[20230615 CFC](#20230615-cfc---uniswap-skim-token-balance-attack)
+
+[20230615 DEPUSDT_LEVUSDC](#20230615-depusdt_levusdc---incorrect-access-control)
+
+[20230606 UN](#20230606-un---price-manipulation)
+
+[20230602 NST SimpleSwap](#20230602-nst-simple-swap---unverified-contract-wrong-approval)
 
 [20230601 Cellframenet](#20230601-cellframenet---calculation-issues-during-liquidity-migration)
 
@@ -79,6 +85,8 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 [20230502 Level](#20230502-level---business-logic-flaw)
 
 [20230428 0vix](#20230428-0vix---flashloan-price-manipulation)
+
+[20230427 SiloFinance](#20230427-Silo-finance---Business-Logic-Flaw)
 
 [20230424 Axioma](#20230424-Axioma---business-logic-flaw)
 
@@ -513,6 +521,66 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 ---
 
 ### List of DeFi Hacks & POCs
+
+---
+
+### 20230615 CFC - Uniswap Skim() token balance attack
+
+### Lost: ~$16k
+
+Testing
+
+```
+forge test --contracts ./src/test/CFC_exp.sol -vvv
+```
+
+#### Contract
+
+[CFC_exp.sol](src/test/CFC_exp.sol)
+
+#### Link Reference
+
+https://twitter.com/hexagate_/status/1669280632738906113
+
+---
+
+### 20230615 DEPUSDT_LEVUSDC - Incorrect access control
+
+### Lost: ~$105k
+
+Testing
+
+```
+forge test --contracts ./src/test/DEPUSDT_LEVUSDC_exp.sol -vvv
+```
+
+#### Contract
+
+[DEPUSDT_LEVUSDC_exp.sol](src/test/DEPUSDT_LEVUSDC_exp.sol)
+
+#### Link Reference
+
+https://twitter.com/numencyber/status/1669278694744150016?cxt=HHwWgMDS9Z2IvKouAAAA
+
+---
+
+### 20230606 UN - Price Manipulation
+
+### Lost: ~$26k
+
+Testing
+
+```
+forge test --contracts ./src/test/UN_exp.sol -vvv
+```
+
+#### Contract
+
+[UN_exp.sol](src/test/UN_exp.sol)
+
+#### Link Reference
+
+https://twitter.com/MetaTrustAlert/status/1667041877428932608
 
 ---
 
@@ -987,6 +1055,26 @@ https://twitter.com/BlockSecTeam/status/1651932529874853888
 https://twitter.com/peckshield/status/1651923235603361793
 
 https://twitter.com/Mudit__Gupta/status/1651958883634536448
+
+---
+
+### 20230427 Silo finance - Business Logic Flaw
+
+### Lost: None
+
+Testing
+
+```
+forge test --contracts ./src/test/silo_finance.t.sol -vvv
+```
+
+#### Contract
+
+[silo_finance.t.sol](src/test/silo_finance.t.sol)
+
+#### Link Reference
+
+https://medium.com/immunefi/silo-finance-logic-error-bugfix-review-35de29bd934a
 
 ---
 
