@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2dd1d6a-f702-43bf-b93e-203d31075ae6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/2023-12/ChannelsFinance_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2023-12/ChannelsFinance_exp.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2024-04/XBridge_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/XBridge_exp.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2024-04/YIEDL_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/YIEDL_exp.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2024-04/Z123_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/Z123_exp.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeFiHackLabs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +74,7 @@
       <workItem from="1713146792482" duration="13830000" />
       <workItem from="1716517892403" duration="161000" />
       <workItem from="1716518078480" duration="17000" />
-      <workItem from="1716518099651" duration="3453000" />
+      <workItem from="1716518099651" duration="3575000" />
     </task>
     <servers />
   </component>
