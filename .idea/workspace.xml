@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2dd1d6a-f702-43bf-b93e-203d31075ae6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/2023-12/ChannelsFinance_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2023-12/ChannelsFinance_exp.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/2024-04/XBridge_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/XBridge_exp.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/2024-04/YIEDL_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/YIEDL_exp.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/2024-04/Z123_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2024-04/Z123_exp.sol" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2X1NqRED9xGAWbHai2ixFdCBBvC" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "learn__hack__v2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/zhenwang/IdeaProjects/DeFiHackLabs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2dd1d6a-f702-43bf-b93e-203d31075ae6" name="Changes" comment="" />
+      <created>1697792817339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697792817339</updated>
+      <workItem from="1697792819618" duration="693000" />
+      <workItem from="1712886375103" duration="109000" />
+      <workItem from="1713097438835" duration="1015000" />
+      <workItem from="1713146792482" duration="13830000" />
+      <workItem from="1716517892403" duration="161000" />
+      <workItem from="1716518078480" duration="17000" />
+      <workItem from="1716518099651" duration="3453000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
