@@ -78,6 +78,14 @@ contract ContractTest is Test {
         address[] memory path = new address[](2);
         path[0] = address(DDC);
         path[1] = address(USDT);
-        TargetRouter.swapExactTokensForTokens(DDC.balanceOf(address(this)), 0, path, address(this), block.timestamp);
+        uint256 ddcBal = DDC.balanceOf(address(this));
+        uint256 pairReserve = DDC.balanceOf(address(TargetPair));
+        uint256 usdtBal = USDT.balanceOf(address(TargetPair));
+        console2.log("Before sell, DDC balance is %d, pariDDC = %d, pairUSDT = %d", ddcBal, pairReserve,usdtBal);
+        TargetRouter.swapExactTokensForTokens(ddcBal, 0, path, address(this), block.timestamp);
+        ddcBal = DDC.balanceOf(address(this));
+        pairReserve = DDC.balanceOf(address(TargetPair));
+        usdtBal = USDT.balanceOf(address(TargetPair));
+        console2.log("After  sell, DDC balance is %d, pariDDC = %d, pairUSDT = %d", ddcBal, pairReserve,usdtBal);
     }
 }
