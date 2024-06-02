@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2dd1d6a-f702-43bf-b93e-203d31075ae6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/2024-05/GPU.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2022-08/DDC_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2022-08/DDC_exp.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/2023-04/Swapos_exp.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/2023-04/Swapos_exp.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,8 +58,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -86,6 +85,7 @@
       <workItem from="1716893693642" duration="2744000" />
       <workItem from="1716943189478" duration="1968000" />
       <workItem from="1716953383039" duration="25766000" />
+      <workItem from="1717235096873" duration="18657000" />
     </task>
     <servers />
   </component>
