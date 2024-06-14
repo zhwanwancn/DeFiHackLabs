@@ -2,7 +2,11 @@
 pragma solidity ^0.8.10;
 
 import "forge-std/Test.sol";
+<<<<<<< HEAD
 import "./../interface.sol";
+=======
+import "../interface.sol";
+>>>>>>> main
 
 // @Analysis
 // https://twitter.com/Phalcon_xyz/status/1782966566042181957

@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-420 incidents included.
+428 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -34,6 +34,7 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 - Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) )
 
 ## Who Support Us? DeFiHackLabs Received Grant From
+
 [![gcc PM](https://github.com/SunWeb3Sec/DeFiHackLabs/assets/107249780/84fb64ac-1d2b-45ba-b864-b744bbbfdb30)](https://x.com/GCCofCommons)
 
 ## Donate us
@@ -44,14 +45,29 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20240611 JokInTheBox](#20240611-JokInTheBox---business-logic-flaw)
+
+[20240610 Bazaar](#20240610-bazaar---insufficient-permission-check)
+
+[20240608 YYStoken](#20240608-YYStoken---business-logic-flaw)
+
+[20240606 MineSTM](#20240606-MineSTM---business-logic-flaw)
+
+[20240604 NCD](#20240604-NCD---business-logic-flaw)
 
 [20240601 VeloCore](#20240601-VeloCore---lack-of-access-control)
 
 [20240529 SCROLL](#20240529-SCROLL---integer-underflow)
 
+[20240529 MetaDragon](#20240529-metadragon---lack-of-access-control)
+
+[20240527 RedKeysCoin](#20240527-redkeyscoin---weak-rng)
+
 [20240526 NORMIE](#20240526-normie---business-logic-flaw)
 
 [20240522 Burner](#20240522-Burner---sandwich-ack)
+
+[20240516 TCH](#20240516-tch---signature-malleability-vulnerability)
 
 [20240514 Sonne Finance](#20240514-sonne-finance---precision-loss)
 
@@ -925,6 +941,93 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20240611 JokInTheBox - business logic flaw
+
+### Lost: 9.2 eth
+
+```sh
+forge test --contracts .\src\test\2024-06\JokInTheBox.sol  -vv --evm-version cancun
+
+```
+#### Contract
+[JokInTheBox_exp.sol](src/test/2024-06/JokInTheBox_exp.sol)
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1800355604692910571
+
+---
+
+
+### 20240610 Bazaar - Insufficient Permission Check
+
+### Lost: 1.4M
+
+
+```sh
+forge test --contracts ./src/test/2024-06/Bazaar_exp.sol -vvv
+```
+#### Contract
+[Bazaar_exp.sol](src/test/2024-06/Bazaar_exp.sol)
+### Link reference
+
+https://x.com/shoucccc/status/1800353122159833195
+
+---
+
+### 20240608 YYStoken - Business Logic Flaw
+
+### Lost: $28K
+
+```sh
+forge test --contracts  src/test/2024-06/YYS_exp.sol -vv
+```
+
+#### Contract
+
+[YYS_exp.sol](src/test/2024-06/YYS_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1799610045589831833
+
+---
+
+### 20240606 MineSTM - Business Logic Flaw
+
+### Lost: $13.8K
+
+```sh
+forge test --contracts  src/test/2024-06/MineSTM_exp.sol -vv
+```
+
+#### Contract
+
+[MineSTM_exp.sol](src/test/2024-06/MineSTM_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1798920774511898862
+
+---
+
+### 20240604 NCD - Business Logic Flaw
+
+### Lost: $6.4K
+
+```sh
+forge test --contracts  src/test/2024-06/NCD_exp.sol -vv
+```
+
+#### Contract
+
+[NCD_exp.sol](src/test/2024-06/NCD_exp.sol)
+
+### Link reference
+
+https://x.com/SlowMist_Team/status/1797821034319765604
+
+---
+
 ### 20240601 VeloCore - lack-of-access-control
 
 ### Lost: $6.88M
@@ -932,18 +1035,16 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ```sh
 forge test --contracts  src/test/2024-06/Velocore_exp.sol -vv
 ```
+
 #### Contract
 
 [Velocore_exp.sol](src/test/2024-06/Velocore_exp.sol)
-
 
 ### Link reference
 
 https://x.com/BeosinAlert/status/1797247874528645333
 
 ---
-
-
 
 ### 20240529 SCROLL - Integer Underflow
 
@@ -960,6 +1061,40 @@ forge test --contracts ./src/test/2024-05/SCROLL_exp.sol -vvv
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1795650745448169741
+
+---
+
+### 20240529 MetaDragon - Lack of Access Control
+
+### Lost: ~ $180k
+
+```sh
+forge test --contracts src/test/2024-05/MetaDragon_exp.sol -vvvvv  --evm-version shanghai
+```
+
+#### Contract
+
+[MetaDragon_exp.sol](src/test/2024-05/MetaDragon_exp.sol)
+
+### Link reference
+
+https://x.com/Phalcon_xyz/status/1795746828064854497
+
+---
+
+### 20240527 RedKeysCoin - Weak RNG
+
+### Lost: $12K
+
+```sh
+forge test --contracts ./src/test/2024-05/RedKeysCoin_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+
+[RedKeysCoin_exp.sol](src/test/2024-05/RedKeysCoin_exp.sol)
+
+### Link reference
 
 ---
 
@@ -996,6 +1131,24 @@ forge test --contracts ./src/test/2024-05/Burner_exp.sol -vv
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1792925754243625311
+
+---
+
+### 20240516 TCH - Signature Malleability Vulnerability
+
+### Lost: $18K
+
+```sh
+forge test --contracts ./src/test/2024-05/TCH_exp.sol -vvv
+```
+
+#### Contract
+
+[TCH_exp.sol](src/test/2024-05/TCH_exp.sol)
+
+### Link reference
+
+https://x.com/DecurityHQ/status/1791180322882629713
 
 ---
 
