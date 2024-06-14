@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-423 incidents included.
+428 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -45,14 +45,23 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20240611 JokInTheBox](#20240611-JokInTheBox---business-logic-flaw)
+
+[20240610 Bazaar](#20240610-bazaar---insufficient-permission-check)
+
+[20240608 YYStoken](#20240608-YYStoken---business-logic-flaw)
 
 [20240606 MineSTM](#20240606-MineSTM---business-logic-flaw)
+
+[20240604 NCD](#20240604-NCD---business-logic-flaw)
 
 [20240601 VeloCore](#20240601-VeloCore---lack-of-access-control)
 
 [20240529 SCROLL](#20240529-SCROLL---integer-underflow)
 
 [20240529 MetaDragon](#20240529-metadragon---lack-of-access-control)
+
+[20240527 RedKeysCoin](#20240527-redkeyscoin---weak-rng)
 
 [20240526 NORMIE](#20240526-normie---business-logic-flaw)
 
@@ -932,6 +941,57 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20240611 JokInTheBox - business logic flaw
+
+### Lost: 9.2 eth
+
+```sh
+forge test --contracts .\src\test\2024-06\JokInTheBox.sol  -vv --evm-version cancun
+
+```
+#### Contract
+[JokInTheBox_exp.sol](src/test/2024-06/JokInTheBox_exp.sol)
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1800355604692910571
+
+---
+
+
+### 20240610 Bazaar - Insufficient Permission Check
+
+### Lost: 1.4M
+
+
+```sh
+forge test --contracts ./src/test/2024-06/Bazaar_exp.sol -vvv
+```
+#### Contract
+[Bazaar_exp.sol](src/test/2024-06/Bazaar_exp.sol)
+### Link reference
+
+https://x.com/shoucccc/status/1800353122159833195
+
+---
+
+### 20240608 YYStoken - Business Logic Flaw
+
+### Lost: $28K
+
+```sh
+forge test --contracts  src/test/2024-06/YYS_exp.sol -vv
+```
+
+#### Contract
+
+[YYS_exp.sol](src/test/2024-06/YYS_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1799610045589831833
+
+---
+
 ### 20240606 MineSTM - Business Logic Flaw
 
 ### Lost: $13.8K
@@ -947,6 +1007,24 @@ forge test --contracts  src/test/2024-06/MineSTM_exp.sol -vv
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1798920774511898862
+
+---
+
+### 20240604 NCD - Business Logic Flaw
+
+### Lost: $6.4K
+
+```sh
+forge test --contracts  src/test/2024-06/NCD_exp.sol -vv
+```
+
+#### Contract
+
+[NCD_exp.sol](src/test/2024-06/NCD_exp.sol)
+
+### Link reference
+
+https://x.com/SlowMist_Team/status/1797821034319765604
 
 ---
 
@@ -1001,6 +1079,22 @@ forge test --contracts src/test/2024-05/MetaDragon_exp.sol -vvvvv  --evm-version
 ### Link reference
 
 https://x.com/Phalcon_xyz/status/1795746828064854497
+
+---
+
+### 20240527 RedKeysCoin - Weak RNG
+
+### Lost: $12K
+
+```sh
+forge test --contracts ./src/test/2024-05/RedKeysCoin_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+
+[RedKeysCoin_exp.sol](src/test/2024-05/RedKeysCoin_exp.sol)
+
+### Link reference
 
 ---
 
