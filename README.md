@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-428 incidents included.
+431 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -45,6 +45,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20240616 WIFCOIN_ETH](#20240616-WIFCOIN_ETH---business-logic-flaw)
+
+[20240611 Crb2](#20240616-Crb2---business-logic-flaw)
+
 [20240611 JokInTheBox](#20240611-JokInTheBox---business-logic-flaw)
 
 [20240610 Bazaar](#20240610-bazaar---insufficient-permission-check)
@@ -57,9 +61,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240601 VeloCore](#20240601-VeloCore---lack-of-access-control)
 
+[20240531 MixedSwapRouter](#20240531-MixedSwapRouter---arbitrary-call)
+
 [20240529 SCROLL](#20240529-SCROLL---integer-underflow)
 
 [20240529 MetaDragon](#20240529-metadragon---lack-of-access-control)
+
+[20240528 EXcommunity](#20240528-EXcommunity---business-logic-flaw)
 
 [20240527 RedKeysCoin](#20240527-redkeyscoin---weak-rng)
 
@@ -941,6 +949,37 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20240616 WIFCOIN_ETH - business logic flaw
+
+### Lost: 13189.92USD(WIF token)
+
+```sh
+forge test --contracts .\src\test\2024-06\WIFCOIN_ETH_exp.sol  -vv --evm-version "shanghai"
+
+```
+#### Contract
+[WIFCOIN_ETH_exp.sol](src/test/2024-06/WIFCOIN_ETH_exp.sol)
+### Link reference
+
+https://x.com/ChainAegis/status/1802550962977964139
+
+---
+
+### 20240616 Crb2 - business logic flaw
+
+### Lost: ~15K
+
+```sh
+forge test --contracts .\src\test\2024-06\Crb2_exp.sol  -vv --evm-version shanghai
+
+```
+#### Contract
+[Crb2_exp.sol](src/test/2024-06/Crb2_exp.sol)
+### Link reference
+
+---
+
+
 ### 20240611 JokInTheBox - business logic flaw
 
 ### Lost: 9.2 eth
@@ -956,7 +995,6 @@ forge test --contracts .\src\test\2024-06\JokInTheBox.sol  -vv --evm-version can
 https://x.com/0xNickLFranklin/status/1800355604692910571
 
 ---
-
 
 ### 20240610 Bazaar - Insufficient Permission Check
 
@@ -1046,6 +1084,24 @@ https://x.com/BeosinAlert/status/1797247874528645333
 
 ---
 
+### 20240531 MixedSwapRouter - Arbitrary Call
+
+### Lost: >10700USD(WINR token)
+
+```sh
+forge test --contracts ./src/test/2024-05/MixedSwapRouter_exp.sol -vvv
+```
+
+#### Contract
+
+[MixedSwapRouter_exp.sol](src/test/2024-05/MixedSwapRouter_exp.sol)
+
+### Link reference
+
+https://x.com/ChainAegis/status/1796484286738227579
+
+---
+
 ### 20240529 SCROLL - Integer Underflow
 
 ### Lost: 76 ETH
@@ -1079,6 +1135,24 @@ forge test --contracts src/test/2024-05/MetaDragon_exp.sol -vvvvv  --evm-version
 ### Link reference
 
 https://x.com/Phalcon_xyz/status/1795746828064854497
+
+---
+
+### 20240528 EXcommunity - Business Logic Flaw
+
+### Lost: 33BNB
+
+```sh
+forge test --contracts ./src/test/2024-05/EXcommunity_exp.sol -vvv
+```
+
+#### Contract
+
+[EXcommunity_exp.sol](src/test/2024-05/EXcommunity_exp.sol)
+
+### Link reference
+
+https://x.com/SlowMist_Team/status/1795648617530995130
 
 ---
 
