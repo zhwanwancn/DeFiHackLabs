@@ -30,6 +30,8 @@
 
 [20231201 UnverifiedContr_0x431abb](#20231201-unverifiedcontr_0x431abb---business-logic-flaw)
 
+[20231130 CAROLProtocol](#20231130-carolprotocol---price-manipulation-via-reentrancy)
+
 [20231129 AIS](#20231129-ais---access-control)
 
 [20231125 TheNFTV2](#20231125-thenftv2---logic-flaw)
@@ -526,8 +528,6 @@ forge test --contracts ./src/test/2023-12/HYPR_exp.sol -vvv
 
 https://twitter.com/BlockSecTeam/status/1735197818883588574
 
-https://twitter.com/MevRefund/status/1734791082376941810
-
 ---
 
 ### 20231206 TIME - Arbitrary Address Spoofing Attack
@@ -627,6 +627,26 @@ forge test --contracts ./src/test/2023-12/UnverifiedContr_0x431abb_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/Phalcon_xyz/status/1730625352953901123
+
+---
+
+### 20231130 CAROLProtocol - Price Manipulation Via Reentrancy
+
+### Lost: ~$53k
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2023-11/CAROLProtocol_exp.sol -vvv
+```
+
+#### Contract
+
+[CAROLProtocol_exp.sol](../../src/test/2023-11/CAROLProtocol_exp.sol)
+
+#### Link reference
+
+https://x.com/MetaSec_xyz/status/1730496513359647167
 
 ---
 
