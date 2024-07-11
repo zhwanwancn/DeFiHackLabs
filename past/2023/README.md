@@ -2,9 +2,13 @@
 
 ## 2023 - List of Past DeFi Incidents
 
-182 incidents included.
+195 incidents included.
 
 [20231230 ChannelsFinance](#20231230-channelsfinance---compoundv2-inflation-attack)
+
+[20231228 DominoTT](#20231228-DominoTT---precision-loss)
+
+[20231228 CCV](#20231228-CCV---precision-loss)
 
 [20231225 Telcoin](#20231225-telcoin---storage-collision)
 
@@ -15,6 +19,8 @@
 [20231217 FloorProtocol](#20231217-floorprotocol---business-logic-flaw)
 
 [20231216 GoodDollar](#20231216-gooddollar---lack-of-input-validation--reentrancy)
+
+[20231216 KEST](#20231216-kest---business-logic-flaw)
 
 [20231216 NFTTrader](#20231216-nfttrader---reentrancy)
 
@@ -32,7 +38,13 @@
 
 [20231130 CAROLProtocol](#20231130-carolprotocol---price-manipulation-via-reentrancy)
 
+[20231129 Burntbubba](#20231129-burntbubba---price-manipulation)
+
 [20231129 AIS](#20231129-ais---access-control)
+
+[20231128 FiberRouter](#20231128-FiberRouter---input-validation)
+
+[20231125 MetaLend](#20231125-metalend---compoundv2-inflation-attack)
 
 [20231125 TheNFTV2](#20231125-thenftv2---logic-flaw)
 
@@ -41,6 +53,10 @@
 [20231117 Token8633_9419](#20231117-token8633_9419---price-manipulation)
 
 [20231117 ShibaToken](#20231117-shibatoken---business-logic-flaw)
+
+[20231116 WECO](#20231116-weco---business-logic-flaw)
+
+[20231115 XAI](#20231115-xai---business-logic-flaw)
 
 [20231115 LinkDAO](#20231115-linkdao---bad-k-value-verification)
 
@@ -62,11 +78,15 @@
 
 [20231106 TheStandard_io](#20231106-thestandard_io---lack-of-slippage-protection)
 
+[20231102 BRAND](#20231102-brand---lack-of-access-control)
+
 [20231102 3913Token](#20231102-3913token---deflationary-token-attack)
 
 [20231101 OnyxProtocol](#20231101-onyxprotocol---precission-loss-vulnerability)
 
 [20231031 UniBotRouter](#20231031-UniBotRouter---arbitrary-external-call)
+
+[20231030 LaEeb](#20231030-laEeb---lack-slippage-protection)
 
 [20231028 AstridProtocol](#20231028-AstridProtocol---business-logic-flaw)
 
@@ -87,6 +107,8 @@
 [20231012 Platypus](#20231012-platypus---business-logic-flaw)
 
 [20231011 BH](#20231011-bh---price-manipulation)
+
+[20231008 ZS](#20231008-zs---business-logic-flaw)
 
 [20231008 pSeudoEth](#20231008-pseudoeth---pool-manipulation)
 
@@ -209,6 +231,8 @@
 [20230620 MIM](#20230620-mimspell---arbitrary-external-call-vulnerability)
 
 [20230618 ARA](#20230618-ara---incorrect-handling-of-permissions)
+
+[20230617 MidasCapitalXYZ](#20230617-midascapitalxyz---precision-loss)
 
 [20230617 Pawnfi](#20230617-pawnfi---business-logic-flaw)
 
@@ -390,6 +414,43 @@ https://twitter.com/AnciliaInc/status/1741353303542501455
 
 ---
 
+### 20231228 CCV - Precision loss
+
+### Lost: ~3.2K $BUSD
+
+```
+forge test --contracts src/test/2023-12/CCV_exp.sol -vvv
+```
+
+#### Contract
+
+[CCV_exp.sol](../../src/test/2023-12/CCV_exp.sol)
+
+#### Link reference
+
+app.blocksec.com/explorer/tx/bsc/0x6ba4152db9da45f5751f2c083bf77d4b3385373d5660c51fe2e4382718afd9b4
+
+---
+
+### 20231228 DominoTT - Precision loss
+
+### Lost: ~5 $WBNB
+
+```
+forge test --contracts src/test/2023-12/DominoTT_exp.sol -vvv
+```
+
+#### Contract
+
+[DominoTT_exp.sol](../../src/test/2023-12/DominoTT_exp.sol)
+
+#### Link reference
+
+https://app.blocksec.com/explorer/tx/bsc/0x6ba4152db9da45f5751f2c083bf77d4b3385373d5660c51fe2e4382718afd9b4
+
+---
+
+
 ### 20231225 Telcoin - Storage Collision
 
 ### Lost: ~1,24M
@@ -487,6 +548,24 @@ forge test --contracts ./src/test/2023-12/GoodDollar_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/MetaSec_xyz/status/1736428284756607386
+
+---
+
+### 20231216 KEST - Business Logic Flaw
+
+### Lost: ~$2.3K
+
+```
+forge test --contracts src/test/2023-12/KEST_exp.sol -vvv
+```
+
+#### Contract
+
+[KEST_exp.sol](../../src/test/2023-12/KEST_exp.sol)
+
+#### Link reference
+
+https://x.com/MetaSec_xyz/status/1736077719849623718
 
 ---
 
@@ -650,6 +729,26 @@ https://x.com/MetaSec_xyz/status/1730496513359647167
 
 ---
 
+### 20231129 Burntbubba - Price Manipulation
+
+### Lost: ~$3K
+
+Testing
+
+```sh
+forge test --contracts src/test/2023-11/Burntbubba_exp.sol -vvv
+```
+
+#### Contract
+
+[Burntbubba_exp.sol](../../src/test/2023-11/Burntbubba_exp.sol)
+
+#### Link reference
+
+https://x.com/MetaSec_xyz/status/1730044259087315046
+
+---
+
 ### 20231129 AIS - Access Control
 
 ### Lost: ~$61k
@@ -667,6 +766,46 @@ forge test --contracts ./src/test/2023-11/AIS_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/Phalcon_xyz/status/1729861048004391306
+
+---
+
+### 20231128 FiberRouter - input validation
+
+### Lost: 18 eth
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2023-11/FiberRouter_exp.sol -vvv
+```
+
+#### Contract
+
+[FiberRouter_exp.sol](../../src/test/2023-11/FiberRouter_exp.sol)
+
+#### Link reference
+
+https://x.com/MetaSec_xyz/status/1729323254610002277
+
+---
+
+### 20231125 MetaLend - CompoundV2 Inflation Attack
+
+### Lost: ~$4K
+
+Test
+
+```
+forge test --contracts src/test/2023-11/MetaLend_exp.sol -vvv
+```
+
+#### Contract
+
+[MetaLend_exp.sol](../../src/test/2023-11/MetaLend_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1728424965257691173
 
 ---
 
@@ -749,6 +888,66 @@ forge test --contracts ./src/test/2023-11/ShibaToken_exp.sol -vvv
 #### Contract
 
 [ShibaToken_exp.sol](../../src/test/2023-11/ShibaToken_exp.sol)
+
+---
+
+### 20231116 WECO - Business Logic Flaw
+
+### Lost: ~$18K
+
+Test
+
+```
+forge test --contracts ./src/test/2023-11/WECO_exp.sol -vvv
+```
+
+#### Contract
+
+[WECO_exp.sol](../../src/test/2023-11/WECO_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1725311048625041887
+
+---
+
+### 20231115 EHX - Lack of Slippage Control
+
+### Lost: Unclear
+
+Test
+
+```
+forge test --contracts ./src/test/2023-11/EHX_exp.sol -vvv
+```
+
+#### Contract
+
+[EHX_exp.sol](../../src/test/2023-11/EHX_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1724691996638618086
+
+---
+
+### 20231115 XAI - Business Logic Flaw
+
+### Lost: Unclear
+
+Test
+
+```
+forge test --contracts src/test/2023-11/XAI_exp.sol -vvv
+```
+
+#### Contract
+
+[XAI_exp.sol](../../src/test/2023-11/XAI_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1724683082064855455
 
 ---
 
@@ -954,6 +1153,26 @@ https://twitter.com/CertiKAlert/status/1721839125836321195
 
 ---
 
+### 20231102 BRAND - Lack of access control
+
+### Lost: ~23 WBNB
+
+Test
+
+```
+forge test --contracts ./src/test/2023-11/BRAND_exp.sol  -vvv
+```
+
+#### Contract
+
+[BRAND_exp.sol](../../src/test/2023-11/BRAND_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1720035913009709473
+
+---
+
 ### 20231102 3913Token - Deflationary Token Attack
 
 ### Lost: ~$31354 USD$
@@ -1013,6 +1232,26 @@ forge test --contracts ./src/test/2023-10/UniBot_exp.sol --evm-version 'shanghai
 #### Link Reference
 
 https://twitter.com/PeckShieldAlert/status/1719251390319796477
+
+---
+
+### 20231030 LaEeb - Lack Slippage Protection
+
+### Lost: ~1.8 WBNB
+
+Test
+
+```
+forge test --contracts ./src/test/2023-10/LaEeb_exp.sol -vvv
+```
+
+#### Contract
+
+[LaEeb_exp.sol](../../src/test/2023-10/LaEeb_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1718964562165420076
 
 ---
 
@@ -1227,6 +1466,26 @@ forge test --contracts ./src/test/2023-10/BH_exp.sol -vvv
 https://twitter.com/BeosinAlert/status/1712139760813375973
 
 https://twitter.com/DecurityHQ/status/1712118881425203350
+
+---
+
+### 20231008 ZS - Business Logic Flaw
+
+### Lost: ~$14K
+
+Test
+
+```
+forge test --contracts ./src/test/2023-10/ZS_exp.sol -vvv
+```
+
+#### Contract
+
+[ZS_exp.sol](../../src/test/2023-10/ZS_exp.sol)
+
+#### Link Reference
+
+https://x.com/MetaSec_xyz/status/1711189697534513327
 
 ---
 
@@ -2519,6 +2778,26 @@ forge test --contracts ./src/test/2023-06/Pawnfi_exp.sol -vvv
 #### Link Reference
 
 https://blog.solidityscan.com/pawnfi-hack-analysis-38ac9160cbb4
+
+---
+
+### 20230617 MidasCapitalXYZ - Precision Loss
+
+### Lost: ~$600K
+
+Testing
+
+```
+forge test --contracts ./src/test/2023-06/MidasCapitalXYZ_exp.sol -vvv
+```
+
+#### Contract
+
+[MidasCapitalXYZ_exp.sol](../../src/test/2023-06/MidasCapitalXYZ_exp.sol)
+
+#### Link Reference
+
+https://medium.com/midas-capital/midas-exploit-post-mortem-1ae266222994
 
 ---
 
