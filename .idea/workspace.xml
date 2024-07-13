@@ -5,6 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2dd1d6a-f702-43bf-b93e-203d31075ae6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/access/Ownable.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/interfaces/draft-IERC6093.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/token/ERC20/ERC20.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/token/ERC20/IERC20.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/@openzeppelin/contracts/utils/Context.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/abi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/MRP.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/Miner.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/RaiseFunds.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/interface/I314Swap.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/interface/IERC314.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/interface/IInvite.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/interface/IPledge.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/2024-07/MRP/contracts/interface/ITrigger.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,34 +46,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;learn__hack__v2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/zhenwang/IdeaProjects/DeFiHackLabs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "learn__hack__v2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/2023/DeFiHackLabs/src/test/2024-07/MRP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\2023\DeFiHackLabs\src\test\2024-07\MRP" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
@@ -86,6 +102,7 @@
       <workItem from="1716953383039" duration="25766000" />
       <workItem from="1717235096873" duration="18657000" />
       <workItem from="1719797896761" duration="1086000" />
+      <workItem from="1720871789264" duration="3181000" />
     </task>
     <servers />
   </component>
