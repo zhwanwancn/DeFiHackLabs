@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-475 incidents included.
+485 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -45,6 +45,12 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+
+[20240712 DoughFina](#20240712-doughfina---incorrect-input-validation)
+
+[20240711 SBT](#20240711-sbt---business-logic-flaw)
+
+[20240711 GAX](#20240711-GAX---precision-loss)
 
 [20240708 LW](#20240708-Lw---integer-underflow)
 
@@ -172,6 +178,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240314 ARK](#20240324-ark---business-logic-flaw)
 
+[20240323 CGT](#20240323-cgt---incorrect-access-control)
+
 [20240321 SSS](#20240321-sss---token-balance-doubles-on-transfer-to-self)
 
 [20240320 Paraswap](#20240320-paraswap---incorrect-access-control)
@@ -232,9 +240,15 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240205 BurnsDefi](#20240205-burnsdefi---price-manipulation)
 
+[20240202 ADC](#20240202-adc---incorrect-access-control)
+
 [20240201 AffineDeFi](#20240201-affinedefi---lack-of-validation-userData)
 
+[20240130 XSIJ](#20240130-xsij---business-logic-flaw)
+
 [20240130 MIMSpell](#20240130-mimspell---precission-loss)
+
+[20240129 PeapodsFinance](#20240128-PeapodsFinance---reentrancy)
 
 [20240128 BarleyFinance](#20240128-barleyfinance---reentrancy)
 
@@ -341,6 +355,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20231106 TrustPad](past/2023/README.md#20231106-trustpad---lack-of-msgsender-address-verification)
 
 [20231106 TheStandard_io](past/2023/README.md#20231106-thestandard_io---lack-of-slippage-protection)
+
+[20231106 KR](past/2023/README.md#20231106-KR---precission-loss)
 
 [20231102 BRAND](past/2023/README.md#20231102-brand---lack-of-access-control)
 
@@ -684,6 +700,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20221211 Lodestar](past/2022/README.md#20221211---lodestar---flashloan-price-manipulation)
 
+[20221211 MEVbot_0x28d9](past/2022/README.md#20221211---MEVbot_0x28d9---precision-loss)
+
 [20221210 MUMUG](past/2022/README.md#20221210---mumug---flashloan-price-manipulation)
 
 [20221210 TIFIToken](past/2022/README.md#20221210---tifitoken---flashloan-price-manipulation)
@@ -711,6 +729,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20221121 SDAO](past/2022/README.md#20221121---sdao---business-logic-flaw)
 
 [20221119 AnnexFinance](past/2022/README.md#20221119---annexfinance---verify-flashloan-callback)
+
+[20221118 Polynomial](past/2022/README.md#20221118---polynomial---no-input-validation)
 
 [20221117 UEarnPool](past/2022/README.md#20221117---uearnpool---flashloan-attack)
 
@@ -969,6 +989,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20210603 PancakeHunny](past/2021/README.md#20210603-pancakehunny---incorrect-calculation)
 
+[20210527 JulSwap](past/2021/README.md#20210527-julswap---flash-loan)
+
 [20210527 BurgerSwap](past/2021/README.md#20210527-burgerswap---mathematical-flaw--reentrancy)
 
 [20210519 PancakeBunny](past/2021/README.md#20210519-pancakebunny---price-oracle-manipulation)
@@ -999,6 +1021,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20201121 Pickle Finance](past/2021/README.md#20201121-pickle-finance)
 
 [20201026 Harvest Finance](past/2021/README.md#20201026-harvest-finance---flashloan-attack)
+
+[20200912 bzx](#past/2021/README.md#20200912-bzx---incorrect-transfer)
 
 [20200804 Opyn Protocol](past/2021/README.md#20200804-opyn-protocol---msgValue-in-loop)
 
@@ -1040,19 +1064,57 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
-### 20210527 JulSwap - Flash Loan
+### 20240712 DoughFina - Incorrect input validation
 
-### Lost: 1.5M
-
+### Lost: ~1.8M USD
 
 ```sh
-forge test --contracts ./src/test/2021-05/JulSwap_exp.sol -vvv --evm-version shanghai
+forge test --contracts ./src/test/2024-07/DoughFina_exp.sol -vvv
 ```
+
 #### Contract
-[JulSwap_exp.sol](src/test/2021-05/JulSwap_exp.sol)
+
+[DoughFina_exp.sol](src/test/2024-07/DoughFina_exp.sol)
+
 ### Link reference
 
-https://x.com/tg_cryptos/status/1398090345368408064
+https://x.com/CertiKAlert/status/1811668992882307478
+
+---
+
+### 20240711 SBT - business logic flaw
+
+### Lost: ~56K USD
+
+```sh
+forge test --contracts ./src/test/2024-07/SBT_exp.sol -vvv
+```
+
+#### Contract
+
+[SBT_exp.sol](src/test/2024-07/SBT_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1811401263969673654
+
+---
+
+### 20240711 GAX - Precision loss
+
+### Lost: ~50K $BUSD
+
+```sh
+forge test --contracts ./src/test/2024-07/GAX_exp.sol -vvv
+```
+
+#### Contract
+
+[GAX_exp.sol](src/test/2024-07/GAX_exp.sol)
+
+### Link reference
+
+https://x.com/EXVULSEC/status/1811348160851378333
 
 ---
 
@@ -2165,6 +2227,24 @@ https://twitter.com/0xNickLFranklin/status/1772195949638775262
 
 ---
 
+### 20240323 CGT - Incorrect Access Control
+
+### Lost: 996B (CGT token)
+
+```sh
+forge test --contracts ./src/test/2024-03/CGT_exp.sol -vvv
+```
+
+#### Contract
+
+[CGT_exp.sol](src/test/2024-03/CGT_exp.sol)
+
+### Link reference
+
+https://x.com/AnciliaInc/status/1771598968448745536
+
+---
+
 ### 20240321 SSS - Token Balance Doubles on Transfer to self
 
 ### Lost: 4.8M
@@ -2728,6 +2808,24 @@ https://medium.com/neptune-mutual/how-was-citadel-finance-exploited-a5f9acd0b408
 
 ---
 
+### 20240202 ADC - incorrect-access-control
+
+### Lost: ~20 eth
+
+```
+forge test --contracts ./src/test/2024-02/ADC_exp.sol -vvv
+```
+
+#### Contract
+
+[ADC_exp.sol](src/test/2024-02/ADC_exp.sol)
+
+#### Link reference
+
+https://x.com/EXVULSEC/status/1753294675971313790
+
+---
+
 ### 20240201 AffineDeFi - lack of validation userData
 
 ### Lost: ~88K
@@ -2745,6 +2843,24 @@ forge test --contracts ./src/test/2024-02/AffineDeFi_exp.sol -vvv
 https://twitter.com/Phalcon_xyz/status/1753020812284809440
 
 https://twitter.com/CyversAlerts/status/1753040754287513655
+
+---
+
+### 20240130 XSIJ - Business Logic Flaw
+
+### Lost: ~51K USD
+
+```
+forge test --contracts ./src/test/2024-01/XSIJ_exp.sol -vvv
+```
+
+#### Contract
+
+[XSIJ_exp.sol](src/test/2024-01/XSIJ_exp.sol)
+
+#### Link reference
+
+https://x.com/CertiKAlert/status/1752384801535918264
 
 ---
 
@@ -2769,6 +2885,24 @@ https://twitter.com/Phalcon_xyz/status/1752278614551216494
 https://twitter.com/peckshield/status/1752279373779194011
 
 https://phalcon.blocksec.com/explorer/security-incidents
+
+---
+
+### 20240129 PeapodsFinance_exp - Reentrancy
+
+### Lost: ~1K $DAI
+
+```
+forge test --contracts ./src/test/2024-01/PeapodsFinance_exp.sol -vvv
+```
+
+#### Contract
+
+[PeapodsFinance_exp.sol](src/test/2024-01/PeapodsFinance_exp.sol)
+
+#### Link reference
+
+https://app.blocksec.com/explorer/tx/eth/0x95c1604789c93f41940a7fd9eca11276975a9a65d250b89a247736287dbd2b7e
 
 ---
 

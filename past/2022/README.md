@@ -2,7 +2,7 @@
 
 ## 2022 - List of Past DeFi Incidents
 
-125 incidents included.
+126 incidents included.
 
 [20221230 DFS](#20221230---dfs---insufficient-validation--flashloan)
 
@@ -21,6 +21,8 @@
 [20221212 BGLD](#20221212---bgld-deflationary-token---flashloan-price-manipulation)
 
 [20221211 Lodestar](#20221211---lodestar---flashloan-price-manipulation)
+
+[20221211 MEVbot_0x28d9](past/2022/README.md#20221211---MEVbot_0x28d9---precision-loss)
 
 [20221210 MUMUG](#20221210---mumug---flashloan-price-manipulation)
 
@@ -49,6 +51,8 @@
 [20221121 SDAO](#20221121---sdao---business-logic-flaw)
 
 [20221119 AnnexFinance](#20221119---annexfinance---verify-flashloan-callback)
+
+[20221118 Polynomial](#20221118---Polynomial---no-input-validation)
 
 [20221117 UEarnPool](#20221117---uearnpool---flashloan-attack)
 
@@ -440,6 +444,26 @@ https://blog.lodestarfinance.io/post-mortem-summary-13f5fe0bb336
 
 ---
 
+### 20221211 - MEVbot_0x28d9 - Precision loss
+
+### Lost: $2k $USDT
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2022-12/MEVbot_0x28d9_exp.sol -vvv
+```
+
+#### Contract
+
+[MEVbot_0x28d9_exp.sol](../../src/test/2022-12/MEVbot_0x28d9_exp.sol)
+
+#### Link reference
+
+https://x.com/8olidity/status/1601795241433964544
+
+---
+
 ### 20221210 - MU&MUG - FlashLoan price manipulation
 
 ### Lost: $57k
@@ -727,6 +751,26 @@ forge test --contracts ./src/test/2022-11/Annex_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/AnciliaInc/status/1593690338526273536
+
+---
+
+### 20221118 - Polynomial - No input validation
+
+### Lost: ~1.4K USD
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2022-11/Polynomial_exp.sol -vvv
+```
+
+#### Contract
+
+[Polynomial_exp.sol](../../src/test/2022-11/Polynomial_exp.sol)
+
+#### Link reference
+
+https://x.com/peckshield/status/1602216000187174912
 
 ---
 
