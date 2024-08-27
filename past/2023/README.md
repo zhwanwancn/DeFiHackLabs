@@ -4,6 +4,8 @@
 
 206 incidents included.
 
+[20231231 Channels BUSD&USDC](past/2023/README.md#20231231-channels---price-manipulation)
+
 [20231230 ChannelsFinance](#20231230-channelsfinance---compoundv2-inflation-attack)
 
 [20231228 DominoTT](#20231228-DominoTT---precision-loss)
@@ -15,6 +17,8 @@
 [20231222 PineProtocol](#20231222-pineprotocol---business-logic-flaw)
 
 [20231220 TransitFinance](#20231220-transitfinance---lack-of-validation-pool)
+
+[20231217 Bob](#20231217-bob---price-manipulation)
 
 [20231217 FloorProtocol](#20231217-floorprotocol---business-logic-flaw)
 
@@ -420,6 +424,22 @@
 
 [20230103 GDS](#20230103---gds---business-logic-flaw)
 
+### 20231231 Channels - Price Manipulation
+
+### Lost: ~$4.4K
+
+
+```sh
+forge test --contracts ./src/test/2023-12/Channels_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Channels_exp.sol](../../src/test/2023-12/Channels_exp.sol)
+### Link reference
+
+https://app.blocksec.com/explorer/tx/bsc/0xcf729a9392b0960cd315d7d49f53640f000ca6b8a0bd91866af5821fdf36afc5
+
+---
+
 ### 20231230 ChannelsFinance - CompoundV2 Inflation Attack
 
 ### Lost: ~320K
@@ -532,6 +552,24 @@ forge test --contracts ./src/test/2023-12/TransitFinance_exp.sol -vvv
 https://twitter.com/Phalcon_xyz/status/1737355152779030570
 
 https://explorer.phalcon.xyz/tx/bsc/0x93ae5f0a121d5e1aadae052c36bc5ecf2d406d35222f4c6a5d63fef1d6de1081
+
+---
+
+### 20231217 Bob - Price Manipulation
+
+### Lost: ~3BNB
+
+
+```sh
+forge test --contracts ./src/test/2023-12/Bob_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Bob_exp.sol](../../src/test/2023-12/Bob_exp.sol)
+### Link reference
+
+https://bscscan.com/tx/0xfb14292a531411f852993e5a3ba4e7eb63ed548220267b9b3f4aacc5572d3a58
+
+---
 
 ### 20231217 FloorProtocol - Business Logic Flaw
 
@@ -649,6 +687,38 @@ https://twitter.com/BlockSecTeam/status/1735197818883588574
 
 ---
 
+### 20231211 GoodCompound - Price Manipulation
+
+### Lost: ~$13K (~250 COMP Token)
+
+
+```sh
+forge test --contracts ./src/test/2023-12/GoodCompound_exp.sol -vvv
+```
+#### Contract
+[GoodCompound_exp.sol](../../src/test/2023-12/GoodCompound_exp.sol)
+### Link reference
+
+https://getherscan.io/tx/0x1106418384414ed56cd7cbb9fedc66a02d39b663d580abc618f2d387348354ab
+
+---
+
+### 20231209 BCT - Price Manipulation
+
+### Lost: ~10.2BNB
+
+
+```sh
+forge test --contracts ./src/test/2023-12/BCT_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[BCT_exp.sol](../../src/test/2023-12/BCT_exp.sol)
+### Link reference
+
+https://bscscan.com/tx/0xdae0b85e01670e6b6b317657a72fb560fc388664cf8bfdd9e1b0ae88e0679103
+
+---
+
 ### 20231207 HNet - Business logic flaw
 
 ### Lost: ~2.4 $WBNB
@@ -704,6 +774,22 @@ forge test --contracts ./src/test/2023-12/ElephantStatus_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/Phalcon_xyz/status/1732354930529435940
+
+---
+
+### 20231205 MAMO - Price Manipulation
+
+### Lost: ~$3.3K
+
+
+```sh
+forge test --contracts ./src/test/2023-12/MAMO_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[MAMO_exp.sol](../../src/test/2023-12/MAMO_exp.sol)
+### Link reference
+
+https://bscscan.com/tx/0x189a8dc1e0fea34fd7f5fa78c6e9bdf099a8d575ff5c557fa30d90c6acd0b29f
 
 ---
 
@@ -764,6 +850,22 @@ forge test --contracts ./src/test/2023-12/UnverifiedContr_0x431abb_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/Phalcon_xyz/status/1730625352953901123
+
+---
+
+### 20231130 EEE - Price Manipulation
+
+### Lost: ~$22.8K
+
+
+```sh
+forge test --contracts ./src/test/2023-11/EEE_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[EEE_exp.sol](../../src/test/2023-11/EEE_exp.sol)
+### Link reference
+
+https://bscscan.com/tx/0x7312d9f9c13fc69f00f58e92a112a3e7f036ced7e65f7e0fa67382488d5557dc
 
 ---
 
