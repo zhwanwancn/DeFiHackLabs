@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-521 incidents included.
+522 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -26,12 +26,12 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 ### OnChain transaction debugging
 
 - Lesson 1: Tools ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/en) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools) | [Vietnamese](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/vi) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/es) )
-- Lesson 2: Warm up ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/ko) )
-- Lesson 3: Write Your Own PoC (Price Oracle Manipulation) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/ko) )
-- Lesson 4: Write Your Own PoC (MEV Bot) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/kr/) )
-- Lesson 5: Rugpull Analysis ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/) )
-- Lesson 6: Write Your Own PoC (Reentrancy) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/) )
-- Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) )
+- Lesson 2: Warm up ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/es) )
+- Lesson 3: Write Your Own PoC (Price Oracle Manipulation) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/es) )
+- Lesson 4: Write Your Own PoC (MEV Bot) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/kr/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/es) )
+- Lesson 5: Rugpull Analysis ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/es) )
+- Lesson 6: Write Your Own PoC (Reentrancy) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/es) )
+- Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/es) )
 
 ## Who Support Us? DeFiHackLabs Received Grant From
 
@@ -43,16 +43,20 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 If you appreciate our work, please consider donating. Even a small amount helps us continue developing and improving our projects, and promoting web3 security.
 
-- Gitcoin Grants Round 21, [Donate DeFiHackLabs](https://explorer.gitcoin.co/?utm_source=grants.gitcoin.co&utm_medium=internal_link&utm_campaign=gg19&utm_content=community-rounds#/round/10/44/38)
+- Gitcoin - [Donate DeFiHackLabs](https://explorer.gitcoin.co/#/projects/0xbea14fd383c20cd085f30b2baa83ce96be83f1b56464bd74fcc00eb85086e280)
 - EVM Chains - 0xD7d6215b4EF4b9B5f40baea48F41047Eb67a11D5
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
-[20240813 VOW](#20240813-vow---misconfiguration)
+[20240903 Penpiexyz_io](#20240903-Penpiexyz_io---reentrancy-and-reward-manipulation)
 
 [20240816 Zenterest](#20240816-Zenterest---price-out-of-date)
 
+[20240828 AAVE](#20240828-aave---arbitrary-call-error)
+
 [20240814 YodlRouter](#20240814-noname---arbitrary-call)
+
+[20240813 VOW](#20240813-vow---misconfiguration)
 
 [20240812 iVest](#20240812-iVest---business-logic-flaw)
 
@@ -1126,35 +1130,54 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20240903 Penpiexyz_io - Reentrancy and Reward Manipulation
 
+### Lost: 11,113.6 ETH (~$27,348,259 USD)
 
+```sh
+forge test --contracts ./src/test/2024-09/Penpiexyzio_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
 
-### 20240813 VOW - Misconfiguration
+[Penpiexyzio_exp.sol](src/test/2024-09/Penpiexyzio_exp.sol)
 
-### Lost: ~ 1M USD
+### Link reference
+
+https://x.com/peckshield/status/1831072098669953388
+
+https://x.com/AnciliaInc/status/1831080555292856476
+
+https://x.com/hackenclub/status/1831383106554573099
+
+post-morten: https://x.com/Penpiexyz_io/status/1831462760787452240
+
+---
+
+### 20240828 AAVE - Arbitrary Call Error
+
+### Lost: 52000
 
 
 ```sh
-forge test --contracts ./src/test/2024-08/VOW_exp.sol -vvv
+forge test --contracts ./src/test/2024-08/AAVE_Repay_Adapter.sol -vvv
 ```
 #### Contract
-[VOW_exp.sol](src/test/2024-08/VOW_exp.sol)
+[AAVE_Repay_Adapter.sol](src/test/2024-08/AAVE_Repay_Adapter.sol)
+
 ### Link reference
 
-https://x.com/Vowcurrency/status/1823407231658025300
-
----
+https://www.vibraniumaudits.com/post/aave-hacked-via-periphery-contract-56kstolenfromtipjar
 
 ### 20240816 Zenterest - Price Out Of Date
 
 ### Lost: ~21000 USD
 
 ```sh
-forge test --contracts ./src/test/2024-08/Zenterest_exp.sol -vvvv --evm-version shanghai
+forge test --contracts ./src/test/2024-09/Zenterest_exp.sol -vvvv --evm-version shanghai
 ```
 #### Contract
 
-[Zenterest_exp.sol](src/test/2024-08/Zenterest_exp.sol)
+[Zenterest_exp.sol](src/test/2024-09/Zenterest_exp.sol)
 
 ### Link reference
 
@@ -1171,10 +1194,26 @@ https://x.com/0xNickLFranklin/status/1824579761383018564
 forge test --contracts ./src/test/2024-08/YodlRouter_exp.sol -vvv
 ```
 #### Contract
-[NoName_exp.sol](src/test/2024-08/NoName_exp.sol)
+[YodlRouter_exp.sol](src/test/2024-08/YodlRouter_exp.sol)
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1823601087011807636
+
+---
+
+### 20240813 VOW - Misconfiguration
+
+### Lost: ~ 1M USD
+
+
+```sh
+forge test --contracts ./src/test/2024-08/VOW_exp.sol -vvv
+```
+#### Contract
+[VOW_exp.sol](src/test/2024-08/VOW_exp.sol)
+### Link reference
+
+https://x.com/Vowcurrency/status/1823407231658025300
 
 ---
 
