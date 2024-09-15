@@ -4,12 +4,12 @@ out = 'out'
 libs = ['lib']
 
 [rpc_endpoints]
-mainnet = "https://rpc.mevblocker.io"
+mainnet = "https://rpc.ankr.com/eth"
 blast = "https://rpc.ankr.com/blast"
 optimism = "https://optimism.llamarpc.com"
 fantom = "https://rpc.ankr.com/fantom"
 arbitrum = "https://rpc.ankr.com/arbitrum"
-bsc = "https://rpc.ankr.com/bsc"
+bsc = "https://binance.llamarpc.com"
 moonriver = "https://moonriver.public.blastapi.io"
 gnosis = "https://rpc.ankr.com/gnosis"
 Avalanche = "https://rpc.ankr.com/avalanche"

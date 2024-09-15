@@ -2,7 +2,7 @@
 
 ## 2022 - List of Past DeFi Incidents
 
-125 incidents included.
+127 incidents included.
 
 [20221230 DFS](#20221230---dfs---insufficient-validation--flashloan)
 
@@ -21,6 +21,8 @@
 [20221212 BGLD](#20221212---bgld-deflationary-token---flashloan-price-manipulation)
 
 [20221211 Lodestar](#20221211---lodestar---flashloan-price-manipulation)
+
+[20221211 MEVbot_0x28d9](#20221211---MEVbot_0x28d9---precision-loss)
 
 [20221210 MUMUG](#20221210---mumug---flashloan-price-manipulation)
 
@@ -49,6 +51,8 @@
 [20221121 SDAO](#20221121---sdao---business-logic-flaw)
 
 [20221119 AnnexFinance](#20221119---annexfinance---verify-flashloan-callback)
+
+[20221118 Polynomial](#20221118---Polynomial---no-input-validation)
 
 [20221117 UEarnPool](#20221117---uearnpool---flashloan-attack)
 
@@ -440,6 +444,26 @@ https://blog.lodestarfinance.io/post-mortem-summary-13f5fe0bb336
 
 ---
 
+### 20221211 - MEVbot_0x28d9 - Precision loss
+
+### Lost: $2k $USDT
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2022-12/MEVbot_0x28d9_exp.sol -vvv
+```
+
+#### Contract
+
+[MEVbot_0x28d9_exp.sol](../../src/test/2022-12/MEVbot_0x28d9_exp.sol)
+
+#### Link reference
+
+https://x.com/8olidity/status/1601795241433964544
+
+---
+
 ### 20221210 - MU&MUG - FlashLoan price manipulation
 
 ### Lost: $57k
@@ -727,6 +751,26 @@ forge test --contracts ./src/test/2022-11/Annex_exp.sol -vvv
 #### Link reference
 
 https://twitter.com/AnciliaInc/status/1593690338526273536
+
+---
+
+### 20221118 - Polynomial - No input validation
+
+### Lost: ~1.4K USD
+
+Testing
+
+```sh
+forge test --contracts ./src/test/2022-11/Polynomial_exp.sol -vvv
+```
+
+#### Contract
+
+[Polynomial_exp.sol](../../src/test/2022-11/Polynomial_exp.sol)
+
+#### Link reference
+
+https://x.com/peckshield/status/1602216000187174912
 
 ---
 
@@ -1744,6 +1788,38 @@ forge test --contracts ./src/test/2022-08/LuckyTiger_exp.sol -vvv
 https://twitter.com/1nf0s3cpt/status/1576117129589317633
 
 https://etherscan.io/tx/0x804ff3801542bff435a5d733f4d8a93a535d73d0de0f843fd979756a7eab26af
+
+---
+
+### 20220816 Circle - Price Manipulation
+
+### Lost: ~$151.6K
+
+
+```sh
+forge test --contracts ./src/test/2022-08/Circle_exp2.sol -vvv
+```
+#### Contract
+[Circle_exp2.sol](../../src/test/2022-08/Circle_exp2.sol)
+### Link reference
+
+https://app.blocksec.com/explorer/tx/eth/0xf1818f62c635e5c80ef16b7857da812c74ce330ebed46682b4d173bffe84c666?line=74
+
+---
+
+### 20220813 Circle - Price Manipulation
+
+### Lost: ~$50.5K
+
+
+```sh
+forge test --contracts ./src/test/2022-08/Circle_exp1.sol -vvv
+```
+#### Contract
+[Circle_exp1.sol](../../src/test/2022-08/Circle_exp1.sol)
+### Link reference
+
+https://app.blocksec.com/explorer/tx/eth/0xa4e650772f6e6b7ecc0964fe4c3854850669d1467570a2fa2b6edfa0f112c4b7
 
 ---
 
