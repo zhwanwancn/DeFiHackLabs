@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-533 incidents included.
+538 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -49,6 +49,14 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 
+[20241022 VISTA](#20241022-vista---flashmint-receive-error)
+
+[20241013 MorphoBlue](#20241013-morphoblue---overpriced-asset-in-oracle)
+
+[20241011 P719Token](#20241011-p719token---price-manipulation-inflate-attack)
+
+[20241006 HYDT](#20241010-hydt---oracle-price-manipulation)
+
 [20241006 SASHAToken](#20241006-sashatoken---price-manipulation)
 
 [20241005 AIZPTToken](#20241005-AIZPTToken---wrong-price-calculation)
@@ -72,6 +80,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240903 Penpiexyz_io](#20240903-Penpiexyz_io---reentrancy-and-reward-manipulation)
 
 [20240816 Zenterest](#20240816-Zenterest---price-out-of-date)
+
+[20240816 OMPxContract](#20240816-ompx-contract---flashloan)
 
 [20240828 AAVE](#20240828-aave---arbitrary-call-error)
 
@@ -195,7 +205,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240415 GFA](#20240415-gfa---business-logic-flaw)
 
-[20240415 Chainge](#20240415-chainge---input-validation)
+[20240415 ChaingeFinance](#20240415-chaingeFinance---arbitrary-external-call)
 
 [20240414 Hackathon](#20240414-hackathon---business-logic-flaw)
 
@@ -1151,9 +1161,60 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20241022 Vista - flashmint receive error
+
+### Lost: $28,000
+
+
+```sh
+forge test --contracts ./src/test/2024-10/VISTA_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[VISTA_exp.sol](src/test/2024-10/VISTA_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/1848403791881900130
+
+---
+
+
+### 20241013 MorphoBlue - Overpriced Asset in Oracle
+
+### Lost: $230,000
+
+
+```sh
+forge test --contracts ./src/test/2024-10/MorphoBlue_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[MorphoBlue_exp.sol](src/test/2024-10/MorphoBlue_exp.sol)
+### Link reference
+
+https://x.com/omeragoldberg/status/1845515843787960661
+
+---
+
+### 20241011 P719Token - Price Manipulation Inflate Attack
+
+### Total Lost : 547.18 BNB (~$312K USD)
+
+```
+forge test --match-contract P719Token_exp -vvv
+```
+
+#### Contract
+
+[P719Token_exp.sol](src/test/2024-10/P719Token_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1844753750386426182
+
+---
+
 ### 20241006 SASHAToken - Price Manipulation
 
-### Total Lost : ~249 ETH (~$600K USD)
+### Total Lost : 249 ETH (~$600K USD)
 
 ```
 forge test --match-contract SASHAToken_exp -vvv
@@ -1166,6 +1227,27 @@ forge test --match-contract SASHAToken_exp -vvv
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1842864840265883833
+
+---
+
+
+### 20241010 HYDT - Oracle Price Manipulation
+
+### Total Lost : 5.8k USDT
+
+```
+forge test --contracts ./src/test/2024-10/HYDT_exp.sol -vvv --evm-version cancun
+```
+
+#### Contract
+
+[HYDT_exp.sol](src/test/2024-10/HYDT_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1844241843518951451
+
+---
 
 ### 20241005 AIZPTToken - Wrong Price Calculation
 
@@ -1359,11 +1441,12 @@ post-morten: https://x.com/Penpiexyz_io/status/1831462760787452240
 
 ### Lost: 52000
 
-
 ```sh
 forge test --match-contract AAVE_Repay_Adapter -vvv
 ```
+
 #### Contract
+
 [AAVE_Repay_Adapter.sol](src/test/2024-08/AAVE_Repay_Adapter.sol)
 
 ### Link reference
@@ -1384,6 +1467,23 @@ forge test --match-contract Zenterest_exp -vvvv --evm-version shanghai
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1824579761383018564
+
+---
+
+### 20240816 OMPx Contract - FlashLoan
+
+### Lost: 4.37 ETH (~11527 USD)
+
+```sh
+forge test --match-contract OMPxContract_exp -vvv
+```
+#### Contract
+
+[OMPxContract_exp.sol](src/test/2024-08/OMPxContract_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1820816386551357448
 
 ---
 
@@ -2452,17 +2552,17 @@ https://x.com/ChainAegis/status/1779809931962827055
 
 ---
 
-### 20240415 Chainge - Input Validation
+### 20240415 ChaingeFinance - Arbitrary External Call 
 
-### Lost: ~200K
+### Lost: ~560K
 
 ```sh
-forge test --match-contract Chainge_exp -vvv
+forge test --match-contract ChaingeFinance_exp -vvv
 ```
 
 #### Contract
 
-[Chainge_exp.sol](src/test/2024-04/Chainge_exp.sol)
+[ChaingeFinance_exp.sol](src/test/2024-04/ChaingeFinance_exp.sol)
 
 ### Link reference
 
