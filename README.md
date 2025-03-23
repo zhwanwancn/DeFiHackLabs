@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-558 incidents included.
+563 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -48,6 +48,15 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20250316 wKeyDAO](#20250316-wkeydao---unprotected-function)
+
+[20250318 DCFToken](#20250318-dcftoken---lack-of-slippage-protection)
+
+[20250316 wKeyDAO](#20250316-wkeydao---unprotected-function)
+
+[20250314 H2O](#20250314-H2O---weak-random-mint)
+
+[20250223 HegicOptions](#20250223-hegicoptions---business-logic-flaw)
 
 [20250221 Bybit](#20250221-bybit---phishing-attack)
 
@@ -80,6 +89,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 <details> <summary> 2024 </summary>
 
 [20241223 Moonhacker](past/2024/README.md#20241223-moonhacker---improper-input-validation)
+
+[20241210 CloberDEX](#20241210-cloberdex---reentrancy)
 
 [20241203 Pledge](past/2024/README.md#20241203-pledge---access-control)
 
@@ -1206,6 +1217,110 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+
+### 20250318 DCFToken - Lack of Slippage Protection
+
+### Lost: ~442k
+
+
+```sh
+forge test --contracts ./src/test/2025-03/DCFToken_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[DCFToken_exp.sol](src/test/2025-03/DCFToken_exp.sol)
+### Link reference
+
+https://x.com/Phalcon_xyz/status/1860890801909190664
+
+---
+
+
+### 20250316 wKeyDAO - unprotected function
+
+### Lost: 737,000
+
+
+```sh
+forge test --contracts ./src/test/2025-03/wKeyDAO_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[wKeyDAO_exp.sol](src/test/2025-03/wKeyDAO_exp.sol)
+### Link reference
+
+https://x.com/Phalcon_xyz/status/1900809936906711549
+
+---
+
+
+
+
+### 20250316 wKeyDAO - unprotected function
+
+### Lost: 737,000
+
+
+```sh
+forge test --contracts ./src/test/2025-03/wKeyDAO_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[wKeyDAO_exp.sol](src/test/2025-03/wKeyDAO_exp.sol)
+### Link reference
+
+https://x.com/Phalcon_xyz/status/1900809936906711549
+
+---
+
+### 20250314 H2O - Weak Random Mint
+
+### Lost: 22470 USD
+
+```sh
+forge test --contracts ./src/test/2025-03/H2O_exp.sol -vvv --evm-version cancun
+```
+
+#### Contract
+[H2O_exp.sol](src/test/2025-03/H2O_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1900525198157205692
+
+---
+
+
+
+
+### 20241210 CloberDEX - Reentrancy
+
+### Lost: ~501K US$ (133.7 WETH)
+
+
+```sh
+forge test --contracts ./src/test/2024-12/CloberDEX_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[CloberDEX_exp.sol](src/test/2024-12/CloberDEX_exp.sol)
+### Link reference
+
+https://x.com/peckshield/status/1866443215186088048
+
+---
+
+### 20250223 HegicOptions - Business Logic Flaw
+
+### Lost: ~104M
+
+
+```sh
+forge test --contracts ./src/test/2025-02/HegicOptions_exp.sol -vvv
+```
+#### Contract
+[HegicOptions_exp.sol](src/test/2025-02/HegicOptions_exp.sol)
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1895770229265121493
+
+---
 
 ### 20250221 Bybit - Phishing attack
 
