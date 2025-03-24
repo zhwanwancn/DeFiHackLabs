@@ -5,18 +5,18 @@ libs = ['lib']
 evm_version = 'shanghai'
 
 [rpc_endpoints]
-mainnet = "https://rpc.ankr.com/eth"
-blast = "https://rpc.ankr.com/blast"
-optimism = "https://optimism.llamarpc.com"
-fantom = "https://rpc.ankr.com/fantom"
-arbitrum = "https://rpc.ankr.com/arbitrum"
-bsc = "https://rpc.ankr.com/bsc"
-moonriver = "https://moonriver.public.blastapi.io"
-gnosis = "https://rpc.ankr.com/gnosis"
-Avalanche = "https://rpc.ankr.com/avalanche"
-polygon = "https://rpc.ankr.com/polygon"
-celo = "https://rpc.ankr.com/celo"
-Base = "https://developer-access-mainnet.base.org"
+mainnet = "https://rpc.ankr.com/eth/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+blast = "https://rpc.ankr.com/blast/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+optimism = "https://optimism.llamarpc.com/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+fantom = "https://rpc.ankr.com/fantom/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+arbitrum = "https://rpc.ankr.com/arbitrum/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+bsc = "https://rpc.ankr.com/bsc/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+moonriver = "https://moonriver.public.blastapi.io/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+gnosis = "https://rpc.ankr.com/gnosis/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+Avalanche = "https://rpc.ankr.com/avalanche/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+polygon = "https://rpc.ankr.com/polygon/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+celo = "https://rpc.ankr.com/celo/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+Base = "https://developer-access-mainnet.base.org/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
 
 # See more config options https://github.com/gakonst/foundry/tree/master/config
 
