@@ -15,7 +15,7 @@ import "./../interface.sol";
 
 // @Analysis
 // Post-mortem :
-// Twitter Guy : https://twitter.com/0xNickLFranklin/status/1778986926705672698
+ 
 // Hacking God :
 
 interface IClaimer {
@@ -46,7 +46,7 @@ contract SumerMoney is Test {
         vm.label(address(sdrUSDC), "sdrUSDC");
         vm.label(address(sdrcbETH), "sdrcbETH");
         vm.label(address(claimer), "claimer");
-        vm.createSelectFork("Base", blocknumToForkFrom);
+        vm.createSelectFork("base", blocknumToForkFrom);
     }
 
     function testExploit() public {
