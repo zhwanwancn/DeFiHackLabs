@@ -1,11 +1,7 @@
 /cache/
 /out/
-<<<<<<< HEAD
 /.vscode/
 .idea/
-.DS_Store
 node_modules/
+.DS_Store
 package-lock.json
-=======
-/.vscode/
->>>>>>> origin/main
