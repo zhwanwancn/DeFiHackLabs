@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-567 incidents included.
+574 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -25,10 +25,10 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ### OnChain transaction debugging
 
-- Lesson 1: Tools ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/en) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools) | [Vietnamese](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/vi) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/es) )
-- Lesson 2: Warm up ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/es) )
-- Lesson 3: Write Your Own PoC (Price Oracle Manipulation) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/es) )
-- Lesson 4: Write Your Own PoC (MEV Bot) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/kr/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/es) )
+- Lesson 1: Tools ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/en) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools) | [Vietnamese](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/vi) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/es) | [日本語](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/01_tools/ja) )
+- Lesson 2: Warm up ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/es) | [日本語](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/02_warmup/ja) )
+- Lesson 3: Write Your Own PoC (Price Oracle Manipulation) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/ko) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/es) | [日本語](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/03_write_your_own_poc/ja) )
+- Lesson 4: Write Your Own PoC (MEV Bot) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/) | [Korean](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/kr/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/es) | [日本語](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/04_write_your_own_poc/ja) )
 - Lesson 5: Rugpull Analysis ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/05_Rugpull/es) )
 - Lesson 6: Write Your Own PoC (Reentrancy) ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/06_write_your_own_poc/es) )
 - Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) | [Spanish](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/es) )
@@ -49,7 +49,17 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 
-[20250330 LeverageSIR](#20250330-leveragesir---storage-slot-1-collision)
+[20250511 MBUToken](#20250511-mbutoken---price-manipulation-not-confirmed)
+
+[20250426 Lifeprotocol](#20250426-lifeprotocol---price-manipulation)
+
+[20250426 ImpermaxV3](#20250426-impermaxv3---floashloan)
+
+[20250418 BTNFT](#20250418-btnft---claim-rewards-without-protection)
+
+[20250416 YVToken](#20250416-yvtoken---not-slippage-protection)
+
+[20250330 LeverageSIR](#20250330-leveragesir---storage-slot1-collision)
 
 [20250328 Alkimiya_IO](#20250328-alkimiya_io---unsafecast)
 
@@ -57,19 +67,21 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250316 wKeyDAO](#20250316-wkeydao---unprotected-function)
 
-[20250314 H2O](#20250314-H2O---weak-random-mint)
+[20250314 H2O](#20250314-h2o---weak-random-mint)
 
 [20250305 1inch Fusion V1 Settlement](#20250305-1inch-fusionv1-settlement---arbitrary-yul-calldata)
 
 [20250223 HegicOptions](#20250223-hegicoptions---business-logic-flaw)
 
+[20250221 StepHeroNFTs](#20250221-stepheronfts---reentrancy-on-sell-nft)
+
 [20250221 Bybit](#20250221-bybit---phishing-attack)
 
 [20250211 FourMeme](#20250211-fourmeme---logic-flaw)
 
-[20250123 ODOS](#20250123-ODOS---invalid-signature-verification)
+[20250123 ODOS](#20250123-odos---invalid-signature-verification)
 
-[20250121 Ast](#20250121-ast---Price-Manipulation)
+[20250121 Ast](#20250121-ast---price-manipulation)
 
 [20250118 Paribus](#20250118-paribus---bad-oracle)
 
@@ -79,15 +91,15 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20250110 JPulsepot](#20250110-jpulsepot---logic-flaw)
 
-[20250108 LPMine](#20250108-LPMine---Incorrect-reward-calculation)
+[20250108 LPMine](#20250108-lpmine---incorrect-reward-calculation)
 
 [20250107 IPC](#20250106-mosca---logic-flaw)
 
 [20250106 Mosca](#20250106-mosca---logic-flaw)
 
-[20250104 SorStaking](#20250104-SorStaking---Incorrect-reward-calculation)
+[20250104 SorStaking](#20250104-sorstaking---incorrect-reward-calculation)
 
-[20250104 98#Token](#20250104-98Token---Unprotected-public-function)
+[20250104 98#Token](#20250104-98token---unprotected-public-function)
 
 [20250101 LAURAToken](#20250101-lauratoken---pair-balance-manipulation)
 
@@ -95,7 +107,9 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20241223 Moonhacker](past/2024/README.md#20241223-moonhacker---improper-input-validation)
 
-[20241210 CloberDEX](#20241210-cloberdex---reentrancy)
+[20241210 LABUBUToken](past/2024/README.md#20241210-labubu-token---logic-flaw)
+
+[20241210 CloberDEX](past/2024/README.md#20241210-cloberdex---reentrancy)
 
 [20241203 Pledge](past/2024/README.md#20241203-pledge---access-control)
 
@@ -145,7 +159,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240828 AAVE](past/2024/README.md#20240828-aave---arbitrary-call-error)
 
-[20240814 YodlRouter](past/2024/README.md#20240814-noname---arbitrary-call)
+[20240814 YodlRouter](past/2024/README.md#20240814-yodlrouter---arbitrary-call)
 
 [20240813 VOW](past/2024/README.md#20240813-vow---misconfiguration)
 
@@ -1225,14 +1239,104 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20250511 MBUToken - Price Manipulation not confirmed
 
-[20250330 LeverageSIR](#20250330-leveragesir---storage-slot1-collision)
+### Lost: ~2.16 M BUSD
+
+```sh
+forge test --contracts ./src/test/2025-05/MBUToken_exp.sol -vvv
+```
+
+#### Contract
+[MBUToken_exp.sol](src/test/2025-05/MBUToken_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1921474575965065701
+
+https://x.com/CertiKAlert/status/1921483904483000457
+
+---
+
+### 20250426 Lifeprotocol - Price Manipulation
+
+### Lost: 15114 BUSD
+
+
+```sh
+forge test --contracts ./src/test/2025-04/Lifeprotocol_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Lifeprotocol_exp.sol](src/test/2025-04/Lifeprotocol_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/1916312483792408688
+
+---
+
+### 20250426 ImpermaxV3 - Floashloan
+
+### Lost: 62,628.66 USD
+
+
+```sh
+forge test --contracts ./src/test/2025-04/ImpermaxV3_exp.sol -vvv
+```
+#### Contract
+[ImpermaxV3_exp.sol](src/test/2025-04/ImpermaxV3_exp.sol)
+### Link reference
+
+https://medium.com/@quillaudits/how-impermax-v3-lost-300k-in-a-flashloan-attack-35b02d0cf152
+
+---
+
+### 20250418 BTNFT - Claim Rewards Without Protection
+
+### Lost: 19025.9193312786235214 BUSD
+
+```sh
+forge test --contracts ./src/test/2025-04/BTNFT_exp.sol -vvv
+```
+
+#### Contract
+[BTNFT_exp.sol](src/test/2025-04/BTNFT_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1913500336301502542
+
+---
+
+
+
+
+
+### 20250416 YVToken - Not Slippage Protection
+
+### Lost: 15261.68240413121964707 BUSD
+
+```sh
+forge test --contracts ./src/test/2025-04/YBToken_exp.sol -vvv --evm-version cancun
+```
+
+#### Contract
+[YBToken_exp.sol](src/test/2025-04/YBToken_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1912684902664782087
+
+---
+
+
+
+
 ### 20250330 LeverageSIR - Storage SLOT1 collision
 
 ### Lost: ~ 353.8 K (17814,86 USDC, 1,4085 WBTC, 119,87 WETH)
 
 ```sh
-forge test --contracts ./src/test/2025-03/LeverageSIR_exp.sol -vvv --watch --evm-version cancun
+forge test --contracts ./src/test/2025-03/LeverageSIR_exp.sol -vvv --evm-version cancun
 ```
 
 #### Contract
@@ -1332,22 +1436,6 @@ forge test --contracts ./src/test/2025-03/OneInchFusionV1SettlementHack.sol -vvv
 
 ---
 
-### 20241210 CloberDEX - Reentrancy
-
-### Lost: ~501K US$ (133.7 WETH)
-
-
-```sh
-forge test --contracts ./src/test/2024-12/CloberDEX_exp.sol -vvv --evm-version cancun
-```
-#### Contract
-[CloberDEX_exp.sol](src/test/2024-12/CloberDEX_exp.sol)
-### Link reference
-
-https://x.com/peckshield/status/1866443215186088048
-
----
-
 ### 20250223 HegicOptions - Business Logic Flaw
 
 ### Lost: ~104M
@@ -1363,6 +1451,30 @@ forge test --contracts ./src/test/2025-02/HegicOptions_exp.sol -vvv
  [Pending]
 
 ---
+
+
+
+
+### 20250221 StepHeroNFTs - Reentrancy On Sell NFT
+
+### Lost : 137.9 BNB
+
+```sh
+forge test --contracts ./src/test/2025-02/StepHeroNFTs_exp.sol -vvv
+```
+
+#### Contract
+[StepHeroNFTs_exp.sol](src/test/2025-02/StepHeroNFTs_exp.sol)
+
+### Link reference
+
+https://x.com/SlowMist_Team/status/1892822286715277344
+
+---
+
+
+
+
 
 ### 20250221 Bybit - Phishing attack
 
@@ -1502,7 +1614,7 @@ https://x.com/TenArmorAlert/status/1877030261067571234
 
 ---
 
-### 20250107 IPC Incorrect burn pairs
+### 20250107 IPC Incorrect burn pairs - Logic Flaw
 
 ### Lost: ～590k USDT
 

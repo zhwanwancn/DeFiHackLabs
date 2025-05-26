@@ -920,7 +920,7 @@ https://x.com/MetaSec_xyz/status/1730044259087315046
 
 ---
 
-### 20231129  AIS- Access Control
+### 20231129  AIS - Insufficient validation
 
 ### Lost: ~$61k
 
@@ -3723,6 +3723,8 @@ forge test --contracts ./src/test/2023-05/HODLCapital_exp.sol -vvv
 
 https://explorer.phalcon.xyz/tx/eth/0xedc214a62ff6fd764200ddaa8ceae54f842279eadab80900be5f29d0b75212df
 
+https://x.com/numencyber/status/1655825767392247808
+
 ---
 
 ### 20230506 Melo - Access Control
@@ -4077,7 +4079,7 @@ https://twitter.com/BeosinAlert/status/1642372700726505473
 
 ---
 
-### 20230328 SafeMoon Hack
+### 20230328 SafeMoon Hack - Access Control
 
 ### Lost: $8.9M
 
@@ -4117,7 +4119,7 @@ https://twitter.com/LTV888/status/1640563457094451214?t=OBHfonYm9yYKvMros6Uw_g&s
 
 ---
 
-### 20230325 - DBW- Business Logic Flaw
+### 20230325 - DBW - Business Logic Flaw
 
 ### Lost: $24k
 
@@ -4661,7 +4663,7 @@ https://github.com/Autosaida/DeFiHackAnalysis/blob/master/analysis/230119_SHOCO.
 
 ---
 
-### 20230119 - ThoreumFinance-business logic flaw
+### 20230119 - ThoreumFinance - business logic flaw
 
 ### Lost: ~2000 BNB
 

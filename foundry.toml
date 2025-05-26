@@ -2,23 +2,26 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
+fs_permissions = [{ access = "read", path = "./"}]
 evm_version = 'shanghai'
 
 [rpc_endpoints]
-mainnet = "https://rpc.ankr.com/eth/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-blast = "https://rpc.ankr.com/blast/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-optimism = "https://optimism.llamarpc.com/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-fantom = "https://rpc.ankr.com/fantom/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-arbitrum = "https://rpc.ankr.com/arbitrum/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-bsc = "https://rpc.ankr.com/bsc/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-moonriver = "https://moonriver.public.blastapi.io/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-gnosis = "https://rpc.ankr.com/gnosis/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-Avalanche = "https://rpc.ankr.com/avalanche/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-polygon = "https://rpc.ankr.com/polygon/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-celo = "https://rpc.ankr.com/celo/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
-Base = "https://developer-access-mainnet.base.org/59ea672e9a19687f466e8e84195c33e082dd219d9d6d226715ec5dd18fa44f7b"
+mainnet = "https://eth.llamarpc.com"
+blast = "https://rpc.ankr.com/blast"
+optimism = "https://optimism.llamarpc.com"
+fantom = "https://fantom-pokt.nodies.app"
+arbitrum = "https://arbitrum.llamarpc.com"
+bsc = "https://binance.llamarpc.com"
+moonriver = "https://moonriver.public.blastapi.io"
+gnosis = "https://gnosis-mainnet.public.blastapi.io"
+avalanche = "https://avax.meowrpc.com"
+polygon = "https://rpc.ankr.com/polygon"
+celo = "https://rpc.ankr.com/celo"
+base = "https://developer-access-mainnet.base.org"
+linea = "https://linea.drpc.org"
+mantle = "https://rpc.mantle.xyz"
 
-# See more config options https://github.com/gakonst/foundry/tree/master/config
+# See more config options https://github.com/foundry-rs/foundry/tree/master/.config
 
 [fmt]
 line_length = 120
@@ -33,3 +36,6 @@ single_line_statement_blocks = 'preserve'
 variable_override_spacing = true
 wrap_comments = false
 ignore = []
+
+
+
