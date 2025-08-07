@@ -2,9 +2,9 @@
 Thank you for your interest in contributing to the DeFiHackLabs project! We appreciate your efforts to help us maintain a comprehensive collection of DeFi hack incidents and their respective proof-of-concept (POC) exploits. This guide will walk you through the process of adding a new incident entry to the project.
 
 ## Table of Contents
-* [Prerequisites](##prerequisites)
-* [Adding a New Incident Entry](##adding-a-new-incident-entry)
-* [Important Notes](##important-notes)
+* [Prerequisites](#prerequisites)
+* [Adding a New Incident Entry](#adding-a-new-incident-entry)
+* [Important Notes](#important-notes)
 
 ## Prerequisites
 Before getting started, ensure you have the following:
@@ -73,13 +73,15 @@ python add_new_entry.py
 1. Test the exploit by running the following command:
  ```bash
    forge test --contracts ./src/test/IncidentName_exp.sol -vvv
-   ```
+```
+
 2. Commit your changes and push them to your forked repository:
 ```bash
     git add .
     git commit -m "feat: Add POC for IncidentName"
     git push origin main
-    ```
+```
+
 3. Open a pull request from your forked repository to the main DeFiHackLabs repository. Provide a clear description of the incident you added.
 
 4. Our maintainers will review your pull request. They may provide feedback or request further changes. Once your pull request is approved, it will be merged into the main repository.
