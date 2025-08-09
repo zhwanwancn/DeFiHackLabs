@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-582 incidents included.
+587 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -61,15 +61,25 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ## List of Past DeFi Incidents
 [20250728 SuperRare](#20250728-superrare---access-control)
 
+[20250726 MulticallWithETH](#20250726-MulticallWithETH---arbitrary-call)
+
 [20250724 SWAPPStaking](#20250724-swappstaking---incorrect-reward-calculation)
+
+[20250720 Stepp2p](#20250720-stepp2p---logic-flaw)
 
 [20250709 GMX](#20250709-gmx---share-price-manipulation)
 
 [20250626 ResupplyFi](#20250626-resupplyfi---share-price-manipulation)
 
+[20250620 Gangsterfinance](#20250620-gangsterfinance---incorrect-dividends)
+
 [20250619 BankrollNetwork](#20250619-bankrollnetwork---incorrect-dividends-calculation)
 
 [20250617 MetaPool](#20250617-metapool---access-control)
+
+[20250526 YDT](#20250526-YDT---logic-flaw)
+
+[20250518 KRC](#20250518-krc---deflationary-token)
 
 [20250511 MBUToken](#20250511-mbutoken---price-manipulation-not-confirmed)
 
@@ -1280,6 +1290,21 @@ https://x.com/SlowMist_Team/status/1949770231733530682
 
 ---
 
+### 20250726 MulticallWithETH - arbitrary-call
+
+### Lost: 10K USD
+
+
+```sh
+forge test --contracts ./src/test/2025-07/MulticallWithETH_exp.sol -vvv
+```
+#### Contract
+[MulticallWithETH_exp.sol](src/test/2025-07/MulticallWithETH_exp.sol)
+### Link reference
+
+
+---
+
 ### 20250724 SWAPPStaking - Incorrect Reward calculation
 
 ### Lost: $32,196.28
@@ -1293,6 +1318,22 @@ forge test --contracts ./src/test/2025-07/SWAPPStaking_exp.sol -vvv
 ### Link reference
 
 https://x.com/deeberiroz/status/1947213692220710950
+
+---
+
+### 20250720 Stepp2p - Logic Flaw
+
+### Lost: 43k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-07/Stepp2p_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Stepp2p_exp.sol](src/test/2025-07/Stepp2p_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/1946887946877149520
 
 ---
 
@@ -1328,16 +1369,32 @@ https://x.com/ResupplyFi/status/1938927974272938420
 
 ---
 
+### 20250620 Gangsterfinance - Incorrect dividends
+
+### Lost: 16.5k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-06/Gangsterfinance.sol -vvv --evm-version shanghai
+```
+#### Contract
+[Gangsterfinance](src/test/2025-06/Gangsterfinance.sol)
+### Link reference
+
+https://t.me/defimon_alerts/1323
+
+---
+
 ### 20250619 BankrollNetwork - Incorrect dividends calculation
 
 ### Lost: 24.5 WBNB
 
 
 ```sh
-forge test --contracts ./src/test/2025-06/BankrollNetwork_exp -vvv --evm-version shanghai
+forge test --contracts ./src/test/2025-06/BankrollNetwork_exp.sol -vvv --evm-version shanghai
 ```
 #### Contract
-[BankrollNetwork_exp](src/test/2025-06/BankrollNetwork_exp)
+[BankrollNetwork_exp](src/test/2025-06/BankrollNetwork_exp.sol)
 ### Link reference
 
 https://x.com/TenArmorAlert/status/1935618109802459464
@@ -1357,6 +1414,38 @@ forge test --contracts ./src/test/2025-06/MetaPool_exp.sol -vvv
 ### Link reference
 
 https://x.com/peckshield/status/1934895187102454206
+
+---
+
+### 20250526 YDT - Logic Flaw
+
+### Lost: 41k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/YDTtoken_exp.sol -vvv --evm-version cancun
+```
+#### Contract
+[YDTtoken_exp](src/test/2025-05/YDTtoken_exp.sol)
+### Link reference
+
+https://x.com/TenArmorAlert/status/1926587721885040686
+
+---
+
+### 20250518 KRC - deflationary token
+
+### Lost: 7k USD
+
+
+```sh
+forge test --contracts ./src/test/2025-05/KRC_token_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[KRC_token_exp](src/test/2025-05/KRC_token_exp)
+### Link reference
+
+https://x.com/CertikAIAgent/status/1924280794916536765
 
 ---
 
