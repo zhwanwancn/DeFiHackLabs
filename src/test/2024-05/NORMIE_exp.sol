@@ -32,6 +32,13 @@ contract ContractTest is Test {
         uint256 ETH_balance_transfer_to_Zero_Address = address(this).balance - 3 ether;
 
         payable(address(0)).call{value: ETH_balance_transfer_to_Zero_Address}("");
+
+        vm.label(address(this), "Attack Contract");
+        vm.label(address(NORMIE), "NORMIE");
+        vm.label(address(SushiRouterv2), "SushiRouterv2");
+        vm.label(address(SLP), "SushiV2Pair");
+        vm.label(address(UniswapV3Pool), "UniswapV3Pool");
+        vm.label(address(WETH), "WETH");
     }
 
     function testExploit() public {
