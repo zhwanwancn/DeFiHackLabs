@@ -2,3 +2,6 @@
 /out/
 /.vscode/
 *.DS_Store
+.env
+scripts/attack_vectors/.venv/
+scripts/attack_vectors/output_test/

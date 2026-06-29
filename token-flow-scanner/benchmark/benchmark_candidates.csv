@@ -1,0 +1,24 @@
+contract_path,vuln_types,has_poc,notes
+src/test/2026-01/MTToken_exp.sol,T01,1,fee无界 典型
+src/test/2023-11/3913_exp.sol,T03,1,通缩不兼容 典型
+src/test/2024-04/FIL314_exp.sol,T03,1,通缩不兼容 典型2
+src/test/2024-11/MFT_exp.sol,T04,1,transfer钩子 典型
+src/test/2024-12/LABUBU_exp.sol,T04,1,transfer到自身钩子 典型2
+src/test/2025-01/LPMine_exp.sol,T05,1,reward计算 典型
+src/test/2023-11/CAROLProtocol_exp.sol,T06,1,重入 典型
+src/test/2024-05/NORMIE_exp.sol,T07,1,fee-on-transfer 典型
+src/test/2024-03/TGBS_exp.sol,T07,1,fee-on-transfer 典型2
+src/test/2025-01/98Token_exp.sol,T08,1,权限 典型
+src/test/2026-01/Truebit_exp.sol,T09,1,算术overflow 典型
+src/test/2025-12/yETH_exp.sol,T09,1,unsafe math 典型2
+src/test/2025-09/NGP_exp.sol,T10,1,价格/reserve操纵 典型
+src/test/2025-05/KRCToken_pair_exp.sol,T10,1,reserve不同步 典型2
+src/test/2025-03/DCFToken_exp.sol,T11,1,无minOut 典型
+src/test/2025-03/Pump_exp.sol,T11,1,无minOut 典型2
+src/test/2024-10/SASHAToken_exp.sol,T11,1,amountOutMinimum=0 典型3
+src/test/2025-01/LAURAToken_exp.sol,T10,1,pair K/余额 建议hold-out
+src/test/2025-07/RANTToken_exp.sol,T04,1,transfer burn 建议hold-out
+src/test/2024-09/Penpiexyzio_exp.sol,"T05,T06",1,重入+reward 建议hold-out
+src/test/2026-01/PRXVT_exp.sol,T05,1,业务逻辑/claimReward 建议hold-out
+src/test/2024-09/Penpiexyzio_exp.sol,"T05,T06",1,重入+reward 建议hold-out
+src/test/2026-01/PRXVT_exp.sol,T05,1,业务逻辑/claimReward 建议hold-out

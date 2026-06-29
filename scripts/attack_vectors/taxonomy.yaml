@@ -1,0 +1,90 @@
+# DeFiHackLabs attack vector taxonomy
+# LLM classifier must only return IDs from this list.
+
+attack_vectors:
+  AV01:
+    name_en: reentrancy
+    name_zh: 重入
+    description: Re-entering protocol via callback/hook before state update (ERC777/ERC667 receive, fallback, transfer hooks).
+  AV02:
+    name_en: price-oracle-manipulation
+    name_zh: 价格预言机操纵
+    description: Manipulating spot price, reserves, TWAP, or custom oracle to borrow/liquidate/mint at wrong price.
+  AV03:
+    name_en: access-control
+    name_zh: 权限控制缺失
+    description: Missing or broken onlyOwner/role checks; unprotected init/migrate/admin functions; wrong owner validation.
+  AV04:
+    name_en: flash-loan-assisted
+    name_zh: 闪电贷辅助攻击
+    description: Attack materially depends on flash loan / flash swap / uncollateralized borrow to fund manipulation (often co-labeled with root cause).
+  AV05:
+    name_en: business-logic-error
+    name_zh: 业务逻辑错误
+    description: Flawed accounting, state machine, double-credit, wrong branch, incorrect invariant in protocol logic.
+  AV06:
+    name_en: arbitrary-external-call
+    name_zh: 任意外部调用
+    description: User-controlled delegatecall/call/router target enabling theft or privilege escalation.
+  AV07:
+    name_en: signature-approval-abuse
+    name_zh: 签名/授权滥用
+    description: Permit/signature replay, excessive token approval, validation bypass on signed messages.
+  AV08:
+    name_en: arithmetic-overflow-rounding
+    name_zh: 算术溢出与精度
+    description: Overflow/underflow, division-before-multiplication, rounding errors exploited for profit.
+  AV09:
+    name_en: proxy-upgrade-flaw
+    name_zh: 代理/升级漏洞
+    description: Unprotected upgrade, storage collision, implementation swap, proxy admin takeover.
+  AV10:
+    name_en: deflationary-fee-on-transfer
+    name_zh: 通缩/转账费代币不兼容
+    description: Assumes transfer amount equals balance delta; incompatible with fee-on-transfer/deflationary tokens.
+  AV11:
+    name_en: bridge-cross-chain
+    name_zh: 跨链/桥漏洞
+    description: Bridge message forgery, validator compromise, cross-chain replay, flawed merkle proof verification.
+  AV12:
+    name_en: rug-social-engineering
+    name_zh: Rug/密钥泄露/社工
+    description: Private key compromise, insider rug, malicious upgrade by trusted party—not a code bug per se.
+  AV13:
+    name_en: mev-sandwich-frontrun
+    name_zh: MEV/三明治/抢跑
+    description: Exploit relies on transaction ordering, mempool manipulation, or sandwich around victim tx.
+  AV14:
+    name_en: uninitialized-contract
+    name_zh: 未初始化合约
+    description: Unprotected initializer/initWallet/initialize allowing attacker to become owner or set critical params.
+  AV15:
+    name_en: slippage-missing
+    name_zh: 缺少滑点保护
+    description: Swaps/withdrawals with zero or missing minOut enabling value extraction via manipulated pools.
+  AV16:
+    name_en: first-deposit-share-manipulation
+    name_zh: 首次存款/空池份额操纵
+    description: Empty pool or first-depositor share inflation (1 wei attack, donation attack on vault shares).
+  AV17:
+    name_en: transfer-hook-manipulation
+    name_zh: Transfer钩子操纵
+    description: Malicious or exploitable logic inside _transfer/transfer hooks used with AMM skim/swap paths.
+  AV18:
+    name_en: reward-calculation-error
+    name_zh: 奖励计算错误
+    description: Wrong reward index, stale checkpoint, block/time misuse, rounding in staking/mining rewards.
+  AV19:
+    name_en: fee-logic-error
+    name_zh: Fee逻辑错误
+    description: Unbounded fee percentages, fee unit mismatch (bps vs amount), fee targeting contracts/pairs wrongly.
+  AV20:
+    name_en: liquidity-pool-manipulation
+    name_zh: 流动性池操纵
+    description: Skim/sync abuse, reserve desync, LP token pricing errors, pool balance manipulation beyond oracle.
+
+rules:
+  - Assign 1-3 vectors per case; pick the root cause first, then enablers (e.g. AV02 + AV04).
+  - AV04 is an enabler—always pair with the underlying flaw when flash loans are used.
+  - AV12 only when attack is key compromise/rug, not exploitable code logic.
+  - Prefer specific vectors (AV17, AV19) over generic AV05 when they fit.

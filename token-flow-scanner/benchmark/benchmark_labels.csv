@@ -1,0 +1,22 @@
+contract_path,vuln_types,root_cause_1line,has_poc,is_negative,is_holdout,notes
+src/test/2026-01/MTToken_exp.sol,T01,"transactionFee多比例无sum<=100 pair成fee目标",1,0,0,
+src/test/2023-11/3913_exp.sol,T03,"通缩币按amount核算 未用balanceOf差量",1,0,0,
+src/test/2024-04/FIL314_exp.sol,T03,"hourBurn通缩+transfer到自身当sell amount假设错误",1,0,0,
+src/test/2024-11/MFT_exp.sol,T04,"transfer内对sell路径burn池子 skim+swap抽报价币",1,0,0,
+src/test/2025-01/LPMine_exp.sol,T05,"用pair balance算reward且时间未更新 可多次extractReward",1,0,0,
+src/test/2023-11/CAROLProtocol_exp.sol,T06,"sell先转WETH receive中重入协议",1,0,0,
+src/test/2024-05/NORMIE_exp.sol,T07,"fee-on-transfer 协议按amount=到账假设",1,0,0,
+src/test/2024-03/TGBS_exp.sol,T07,"_burnBlock时transfer在pair内burn 到账!=amount",1,0,0,
+src/test/2025-01/98Token_exp.sol,T08,"swapTokensForTokens等无权限 任何人可抽token",1,0,0,
+src/test/2026-01/Truebit_exp.sol,T09,"totalSupply*totalSupply overflow solveForAmount错",1,0,0,
+src/test/2025-12/yETH_exp.sol,T09,"virtual_balance/vb_prod_sum/update_rates等unsafe math",1,0,0,
+src/test/2025-09/NGP_exp.sol,T10,"NGT _update中sync在swap路径操纵reserve/价格",1,0,0,
+src/test/2025-05/KRCToken_pair_exp.sol,T10,"fee-on-transfer+transfer+skim使reserve与balance不同步",1,0,0,
+src/test/2025-03/DCFToken_exp.sol,T11,"bonding/swap无minOut",1,0,0,
+src/test/2025-03/Pump_exp.sol,T11,"buyToken/exactInputSingle等无minOut",1,0,0,
+src/test/2024-10/SASHAToken_exp.sol,T11,"fee-on-transfer+exactInputSingle amountOutMinimum=0",1,0,0,
+src/test/2024-12/LABUBU_exp.sol,T04,"transfer到自身钩子/反射 flash中多次调用虚增余额再swap",1,0,0,
+src/test/2025-01/LAURAToken_exp.sol,T10,"removeLiquidityWhenKIncreases与pair余额操纵",1,0,1,hold-out
+src/test/2025-07/RANTToken_exp.sol,T04,"transfer(RANT,amount)burn+pancakeCall回调",1,0,1,hold-out
+src/test/2024-09/Penpiexyzio_exp.sol,"T05,T06","重入+reward操纵 Pendle自定义reward合约",1,0,1,hold-out
+src/test/2026-01/PRXVT_exp.sol,T05,"stPRXVT claimReward与转移下的业务逻辑缺陷",1,0,1,hold-out

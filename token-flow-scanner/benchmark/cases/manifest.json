@@ -1,0 +1,23 @@
+[
+  {"id": "T01_MTToken", "chain": "bsc", "address": "0x2f3f25046Ea518d1E524B8fB6147c656D6722CeD", "name": "MT", "poc": "src/test/2026-01/MTToken_exp.sol", "date": "2026-01"},
+  {"id": "T02_3913", "chain": "bsc", "address": "0xd74F28c6E0E2c09881Ef2d9445F158833c174775", "name": "3913", "poc": "src/test/2023-11/3913_exp.sol", "date": "2023-11"},
+  {"id": "T03_FIL314", "chain": "bsc", "address": "0xE8A290c6Fc6Fa6C0b79C9cfaE1878d195aeb59aF", "name": "FIL314", "poc": "src/test/2024-04/FIL314_exp.sol", "date": "2024-04"},
+  {"id": "T04_MFT", "chain": "bsc", "address": "0x29Ee4526e3A4078Ce37762Dc864424A089Ebba11", "name": "MFT", "poc": "src/test/2024-11/MFT_exp.sol", "date": "2024-11"},
+  {"id": "T05_LPMine", "chain": "bsc", "address": "0x6BBeF6DF8db12667aE88519090984e4F871e5feb", "name": "LPMine", "poc": "src/test/2025-01/LPMine_exp.sol", "date": "2025-01"},
+  {"id": "T06_CAROLProtocol", "chain": "base", "address": "0x26fe408BbD7A490fEB056DA8e2D1e007938E5685", "name": "CAROLProtocol", "poc": "src/test/2023-11/CAROLProtocol_exp.sol", "date": "2023-11"},
+  {"id": "T07_NORMIE", "chain": "base", "address": "0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200", "name": "NORMIE", "poc": "src/test/2024-05/NORMIE_exp.sol", "date": "2024-05"},
+  {"id": "T08_TGBS", "chain": "bsc", "address": "0xedecfA18CAE067b2489A2287784a543069f950F4", "name": "TGBS", "poc": "src/test/2024-03/TGBS_exp.sol", "date": "2024-03"},
+  {"id": "T09_98Token", "chain": "bsc", "address": "0xB040D88e61EA79a1289507d56938a6AD9955349C", "name": "swapContract", "poc": "src/test/2025-01/98Token_exp.sol", "date": "2025-01"},
+  {"id": "T10_Truebit", "chain": "mainnet", "address": "0x764C64b2A09b09Acb100B80d8c505Aa6a0302EF2", "name": "POOL", "poc": "src/test/2026-01/Truebit_exp.sol", "date": "2026-01"},
+  {"id": "T11_yETH", "chain": "mainnet", "address": "0xCcd04073f4BdC4510927ea9Ba350875C3c65BF81", "name": "Pool", "poc": "src/test/2025-12/yETH_exp.sol", "date": "2025-12"},
+  {"id": "T12_NGP", "chain": "bsc", "address": "0xd2F26200cD524dB097Cf4ab7cC2E5C38aB6ae5c9", "name": "NGP", "poc": "src/test/2025-09/NGP_exp.sol", "date": "2025-09"},
+  {"id": "T13_KRCToken_pair", "chain": "bsc", "address": "0xdBEAD75d3610209A093AF1D46d5296BBeFFd53f5", "name": "KRC_pair", "poc": "src/test/2025-05/KRCToken_pair_exp.sol", "date": "2025-05"},
+  {"id": "T14_DCFToken", "chain": "bsc", "address": "0x8487f846d59F8FB4f1285C64086b47e2626C01B6", "name": "PancakeV2_BSCUSD_DCF", "poc": "src/test/2025-03/DCFToken_exp.sol", "date": "2025-03"},
+  {"id": "T15_Pump", "chain": "bsc", "address": "0x09762e00Ce0DE8211F7002F70759447B1F2b1892", "name": "TAGAIFUN", "poc": "src/test/2025-03/Pump_exp.sol", "date": "2025-03"},
+  {"id": "T17_SASHAToken", "chain": "mainnet", "address": "0xD1456D1b9CEb59abD4423a49D40942a9485CeEF6", "name": "SASHA", "poc": "src/test/2024-10/SASHAToken_exp.sol", "date": "2024-10"},
+  {"id": "T18_LABUBU", "chain": "bsc", "address": "0x2fF960F1D9AF1A6368c2866f79080C1E0B253997", "name": "LABUBU", "poc": "src/test/2024-12/LABUBU_exp.sol", "date": "2024-12"},
+  {"id": "T99_1", "chain": "mainnet", "address": "0x16296859C15289731521F199F0a5f762dF6347d0", "name": "MasterPenpie", "poc": "src/test/2024-09/Penpiexyzio_exp.sol", "date": "2024-09"},
+  {"id": "T99_2", "chain": "base", "address": "0xDAc30a5e2612206E2756836Ed6764EC5817e6Fff", "name": "stPRXVT", "poc": "src/test/2026-01/PRXVT_exp.sol", "date": "2026-01"},
+  {"id": "T99_3", "chain": "mainnet", "address": "0x05641e33fd15baf819729df55500b07b82eb8e89", "name": "LAURA", "poc": "src/test/2025-01/LAURAToken_exp.sol", "date": "2025-01"},
+  {"id": "T99_4", "chain": "bsc", "address": "0xc321AC21A07B3d593B269AcdaCE69C3762CA2dd0", "name": "RANT", "poc": "src/test/2025-07/RANTToken_exp.sol", "date": "2025-07"}
+]
